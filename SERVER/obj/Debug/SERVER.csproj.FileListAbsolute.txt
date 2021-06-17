@@ -1,0 +1,10 @@
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\bin\Debug\dictTest.exe.config
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\obj\Debug\dictTest.exe
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\obj\Debug\dictTest.pdb
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\bin\Debug\dictTest.exe
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\bin\Debug\dictTest.pdb
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\bin\Debug\MySql.Data.dll
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\obj\Debug\SERVER.csprojResolveAssemblyReference.cache
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\obj\Debug\dictTest.Properties.Resources.resources
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\obj\Debug\SERVER.csproj.GenerateResource.Cache
+C:\Users\nduyt\Downloads\test-query-dict\dictTest\obj\Debug\SERVER.Server.resources
