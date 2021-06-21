@@ -168,7 +168,7 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="viewTypeBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAqdJREFUSEudlc9rE1EQxxe92IsHvW6JikJJs5cKGkQQ/wBPzVKh1RZFBGOSrhTp
@@ -185,7 +185,7 @@
         vDj2r0ktWPAWT6xAelVvJtUPuAv1r0a/gtwm1MaiE4Q/LcceWTMxx8AAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="viewMeaningBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAYAAAArdgcFAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         iQAAC4kBN8nLrQAAAp1JREFUSEuVlE1o1FAQx9cqWlCkSk8iWlHrSdBLvQjZZD/ydiMowlIUpIrgx6FU
@@ -202,7 +202,7 @@
         K/r1YzHwHenDnt8F/DOP+ev0Y0Qm8xeektbaUcJXlAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="exportExcelBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAcFJREFUSEtjGN7AoNJA1LjeWATKJQsw6lWbKerVGAbp1xo16dYabtatNXqiV2v0

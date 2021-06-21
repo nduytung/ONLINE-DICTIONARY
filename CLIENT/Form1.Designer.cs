@@ -31,14 +31,14 @@
             System.Windows.Forms.Button button1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.wordType = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.displayInput = new System.Windows.Forms.RichTextBox();
+            this.viewTypeBtn = new System.Windows.Forms.Button();
+            this.viewMeaningBtn = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.searchedList = new System.Windows.Forms.ListView();
-            this.btSend = new System.Windows.Forms.Button();
+            this.searchBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.exportExcelBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -74,54 +74,54 @@
             this.webBrowser1.Size = new System.Drawing.Size(701, 301);
             this.webBrowser1.TabIndex = 11;
             // 
-            // wordType
+            // displayInput
             // 
-            this.wordType.BackColor = System.Drawing.Color.White;
-            this.wordType.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.wordType.Enabled = false;
-            this.wordType.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wordType.Location = new System.Drawing.Point(220, 165);
-            this.wordType.Name = "wordType";
-            this.wordType.Size = new System.Drawing.Size(476, 42);
-            this.wordType.TabIndex = 12;
-            this.wordType.Text = "";
-            this.wordType.TextChanged += new System.EventHandler(this.wordType_TextChanged);
+            this.displayInput.BackColor = System.Drawing.Color.White;
+            this.displayInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.displayInput.Enabled = false;
+            this.displayInput.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayInput.Location = new System.Drawing.Point(220, 165);
+            this.displayInput.Name = "displayInput";
+            this.displayInput.Size = new System.Drawing.Size(476, 42);
+            this.displayInput.TabIndex = 12;
+            this.displayInput.Text = "";
             // 
-            // button3
+            // viewTypeBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(0, 181);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 51);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "   View word type";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.viewTypeBtn.BackColor = System.Drawing.Color.White;
+            this.viewTypeBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.viewTypeBtn.FlatAppearance.BorderSize = 0;
+            this.viewTypeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewTypeBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewTypeBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.viewTypeBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewTypeBtn.Image")));
+            this.viewTypeBtn.Location = new System.Drawing.Point(0, 181);
+            this.viewTypeBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.viewTypeBtn.Name = "viewTypeBtn";
+            this.viewTypeBtn.Size = new System.Drawing.Size(200, 51);
+            this.viewTypeBtn.TabIndex = 5;
+            this.viewTypeBtn.Text = "   View word type";
+            this.viewTypeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.viewTypeBtn.UseVisualStyleBackColor = false;
+            this.viewTypeBtn.Click += new System.EventHandler(this.viewTypeBtn_Click);
             // 
-            // button2
+            // viewMeaningBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 125);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 51);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "  View meaning";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.viewMeaningBtn.BackColor = System.Drawing.Color.White;
+            this.viewMeaningBtn.FlatAppearance.BorderSize = 0;
+            this.viewMeaningBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewMeaningBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewMeaningBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.viewMeaningBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewMeaningBtn.Image")));
+            this.viewMeaningBtn.Location = new System.Drawing.Point(0, 125);
+            this.viewMeaningBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.viewMeaningBtn.Name = "viewMeaningBtn";
+            this.viewMeaningBtn.Size = new System.Drawing.Size(200, 51);
+            this.viewMeaningBtn.TabIndex = 4;
+            this.viewMeaningBtn.Text = "  View meaning";
+            this.viewMeaningBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.viewMeaningBtn.UseVisualStyleBackColor = false;
+            this.viewMeaningBtn.Click += new System.EventHandler(this.viewMeaningBtn_Click);
             // 
             // tbMessage
             // 
@@ -147,55 +147,57 @@
             this.searchedList.UseCompatibleStateImageBehavior = false;
             this.searchedList.View = System.Windows.Forms.View.List;
             // 
-            // btSend
+            // searchBtn
             // 
-            this.btSend.FlatAppearance.BorderSize = 2;
-            this.btSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSend.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSend.Location = new System.Drawing.Point(635, 19);
-            this.btSend.Name = "btSend";
-            this.btSend.Size = new System.Drawing.Size(84, 32);
-            this.btSend.TabIndex = 13;
-            this.btSend.Text = "search";
-            this.btSend.UseVisualStyleBackColor = true;
+            this.searchBtn.FlatAppearance.BorderSize = 2;
+            this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Location = new System.Drawing.Point(641, 19);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(84, 32);
+            this.searchBtn.TabIndex = 13;
+            this.searchBtn.Text = "search";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.exportExcelBtn);
             this.panel1.Controls.Add(button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.viewMeaningBtn);
             this.panel1.Controls.Add(this.searchedList);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.viewTypeBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 539);
             this.panel1.TabIndex = 14;
             // 
-            // button5
+            // exportExcelBtn
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(0, 235);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 51);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "   Export to Excel";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.exportExcelBtn.BackColor = System.Drawing.Color.White;
+            this.exportExcelBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.exportExcelBtn.FlatAppearance.BorderSize = 0;
+            this.exportExcelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportExcelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportExcelBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.exportExcelBtn.Image = ((System.Drawing.Image)(resources.GetObject("exportExcelBtn.Image")));
+            this.exportExcelBtn.Location = new System.Drawing.Point(0, 235);
+            this.exportExcelBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.exportExcelBtn.Name = "exportExcelBtn";
+            this.exportExcelBtn.Size = new System.Drawing.Size(200, 51);
+            this.exportExcelBtn.TabIndex = 6;
+            this.exportExcelBtn.Text = "   Export to Excel";
+            this.exportExcelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.exportExcelBtn.UseVisualStyleBackColor = false;
+            this.exportExcelBtn.Click += new System.EventHandler(this.exportExcelBtn_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCoral;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btSend);
+            this.panel2.Controls.Add(this.searchBtn);
             this.panel2.Controls.Add(this.tbMessage);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(202, 2);
@@ -215,7 +217,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "       Originally created by team 3";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -238,14 +239,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.wordType);
+            this.Controls.Add(this.displayInput);
             this.Controls.Add(this.webBrowser1);
             this.ForeColor = System.Drawing.Color.White;
             this.HelpButton = true;
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(2);
             this.Text = "Client";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -256,15 +256,15 @@
 
         #endregion
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.RichTextBox wordType;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RichTextBox displayInput;
+        private System.Windows.Forms.Button viewTypeBtn;
+        private System.Windows.Forms.Button viewMeaningBtn;
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.ListView searchedList;
-        private System.Windows.Forms.Button btSend;
+        private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button exportExcelBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

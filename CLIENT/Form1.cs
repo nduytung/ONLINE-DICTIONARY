@@ -23,8 +23,10 @@ namespace CLIENT
         TcpClient tcpclient;
         Stream stream;
         string plainResult;
-        
-        int count = 1;
+        string[] meaning = new string[10];
+        string[] type = new string[10];
+
+        int count = 0;
 
         //hàm init 
         public Form1()
@@ -33,12 +35,6 @@ namespace CLIENT
             Control.CheckForIllegalCrossThreadCalls = false;
             Connect();
 
-        }
-
-        //gửi đi dữ liệu cần tìm kiếm 
-        private void btSend_Click(object sender, EventArgs e)
-        {
-            Send();
         }
 
         //kết nối với server 
@@ -84,6 +80,36 @@ namespace CLIENT
             }
         }
 
+        private void viewMeaningBtn_Click(object sender, EventArgs e)
+        {
+            displayInput.Text = meaning[count];
+        }
+
+        private void viewTypeBtn_Click(object sender, EventArgs e)
+        {
+            displayInput.Text = type[count];
+        }
+
+        private void exportExcelBtn_Click(object sender, EventArgs e)
+        {
+            //add to excel 
+            Excel excel = new Excel(@"C:\DATA\Save.xlsx", 1);
+            for (int i = 1; i <= count; i++)
+            {
+
+                excel.WriteToCell(i, 1, tbMessage.Text, type[i], meaning[i]);
+            }
+            excel.Save();
+            excel.Close();
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            Send();
+        }
+
+
+
         //phân giải chuỗi HTML trả về để hiển thị thích hợp 
         void ResolveResult(String plainResult)
         {
@@ -93,46 +119,20 @@ namespace CLIENT
             {
                 if (item.Contains("*"))
                 {
-                    wordType.Text += item + "\n";
+                    type[count] = item;
+                    count++;
                 }
                 if (item.Contains("-"))
                 {
-                    //meanInput.Text = item;
+                    meaning[count] = item;
+                    count++;
                     break;
                 }
             }
-            webBrowser1.DocumentText = plainResult ;
-            //add to excel 
-            Excel excel = new Excel(@"C:\DATA\Save.xlsx", 1);
-            count++;
-            excel.WriteToCell(count, 1, tbMessage.Text, wordType.Text, "hello");
-            excel.Save();
-            excel.Close();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
+            webBrowser1.DocumentText = plainResult;
 
         }
 
-        private void wordType_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
