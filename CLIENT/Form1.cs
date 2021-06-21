@@ -23,6 +23,8 @@ namespace CLIENT
         TcpClient tcpclient;
         Stream stream;
         string plainResult;
+        
+        int count = 1;
 
         //hàm init 
         public Form1()
@@ -99,6 +101,12 @@ namespace CLIENT
                 }
             }
             webBrowser1.DocumentText = plainResult ;
+            //add to excel 
+            Excel excel = new Excel(@"C:\DATA\Save.xlsx", 1);
+            count++;
+            excel.WriteToCell(count, 1, tbMessage.Text, wordType.Text, meanInput.Text);
+            excel.Save();
+            excel.Close();
         }
    
        
