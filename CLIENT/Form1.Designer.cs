@@ -36,10 +36,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tbMessage = new System.Windows.Forms.TextBox();
             this.searchedList = new System.Windows.Forms.ListView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btSend = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
@@ -71,7 +71,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(220, 237);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(701, 291);
+            this.webBrowser1.Size = new System.Drawing.Size(701, 301);
             this.webBrowser1.TabIndex = 11;
             // 
             // wordType
@@ -147,17 +147,17 @@
             this.searchedList.UseCompatibleStateImageBehavior = false;
             this.searchedList.View = System.Windows.Forms.View.List;
             // 
-            // button4
+            // btSend
             // 
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(635, 19);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 32);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "search";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btSend.FlatAppearance.BorderSize = 2;
+            this.btSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSend.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSend.Location = new System.Drawing.Point(635, 19);
+            this.btSend.Name = "btSend";
+            this.btSend.Size = new System.Drawing.Size(84, 32);
+            this.btSend.TabIndex = 13;
+            this.btSend.Text = "search";
+            this.btSend.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -172,18 +172,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 539);
             this.panel1.TabIndex = 14;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightCoral;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.tbMessage);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(202, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(728, 72);
-            this.panel2.TabIndex = 15;
             // 
             // button5
             // 
@@ -203,28 +191,40 @@
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btSend);
+            this.panel2.Controls.Add(this.tbMessage);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(202, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(728, 72);
+            this.panel2.TabIndex = 15;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(13, 21);
+            this.label1.Location = new System.Drawing.Point(-4, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 30);
+            this.label1.Size = new System.Drawing.Size(234, 21);
             this.label1.TabIndex = 14;
             this.label1.Text = "       Originally created by team 3";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(222, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 45);
+            this.label2.Size = new System.Drawing.Size(230, 50);
             this.label2.TabIndex = 15;
             this.label2.Text = "Word details";
             // 
@@ -261,7 +261,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.ListView searchedList;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btSend;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button5;
