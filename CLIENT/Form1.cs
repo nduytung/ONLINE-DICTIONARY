@@ -18,7 +18,8 @@ namespace CLIENT
     public partial class Form1 : Form
     {
 
-        //vì được parsing qua lại giữa nhiều function, thậm chí là async, nên các biến này sẽ được khai báo GLOBAL 
+        //vì được parsing qua lại giữa nhiều function, thậm chí là async, nên các biến này sẽ được khai báo GLOBAL
+        //
         IPEndPoint ipe;
         TcpClient tcpclient;
         Stream stream;
@@ -38,7 +39,7 @@ namespace CLIENT
             Send();
         }
 
-        //kết nối với server 
+        //kết nối với server loop
         void Connect()
         {
             try
