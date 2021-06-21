@@ -32,6 +32,7 @@ namespace CLIENT
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;
             Connect();
+
         }
 
         //gửi đi dữ liệu cần tìm kiếm 
@@ -96,7 +97,7 @@ namespace CLIENT
                 }
                 if (item.Contains("-"))
                 {
-                    meanInput.Text = item;
+                    //meanInput.Text = item;
                     break;
                 }
             }
@@ -104,13 +105,29 @@ namespace CLIENT
             //add to excel 
             Excel excel = new Excel(@"C:\DATA\Save.xlsx", 1);
             count++;
-            excel.WriteToCell(count, 1, tbMessage.Text, wordType.Text, meanInput.Text);
+            excel.WriteToCell(count, 1, tbMessage.Text, wordType.Text, "hello");
             excel.Save();
             excel.Close();
         }
-   
-       
-       
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wordType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
