@@ -42,6 +42,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -140,9 +141,9 @@
             this.searchedList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchedList.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchedList.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.searchedList.Location = new System.Drawing.Point(0, 289);
+            this.searchedList.Location = new System.Drawing.Point(26, 289);
             this.searchedList.Name = "searchedList";
-            this.searchedList.Size = new System.Drawing.Size(200, 247);
+            this.searchedList.Size = new System.Drawing.Size(174, 247);
             this.searchedList.TabIndex = 3;
             this.searchedList.UseCompatibleStateImageBehavior = false;
             this.searchedList.View = System.Windows.Forms.View.List;
@@ -196,6 +197,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.searchBtn);
             this.panel2.Controls.Add(this.tbMessage);
@@ -228,6 +230,17 @@
             this.label2.Size = new System.Drawing.Size(230, 50);
             this.label2.TabIndex = 15;
             this.label2.Text = "Word details";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.radioButton1.Location = new System.Drawing.Point(3, 31);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(14, 13);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -267,6 +280,7 @@
         private System.Windows.Forms.Button exportExcelBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
 
