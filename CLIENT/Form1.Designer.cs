@@ -96,7 +96,7 @@
             this.viewTypeBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewTypeBtn.ForeColor = System.Drawing.SystemColors.GrayText;
             this.viewTypeBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewTypeBtn.Image")));
-            this.viewTypeBtn.Location = new System.Drawing.Point(0, 181);
+            this.viewTypeBtn.Location = new System.Drawing.Point(0, 184);
             this.viewTypeBtn.Margin = new System.Windows.Forms.Padding(0);
             this.viewTypeBtn.Name = "viewTypeBtn";
             this.viewTypeBtn.Size = new System.Drawing.Size(200, 51);
@@ -141,7 +141,10 @@
             this.searchedList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchedList.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchedList.ForeColor = System.Drawing.SystemColors.MenuText;
+
             this.searchedList.Location = new System.Drawing.Point(26, 289);
+            this.searchedList.HideSelection = false;
+            this.searchedList.Location = new System.Drawing.Point(0, 289);
             this.searchedList.Name = "searchedList";
             this.searchedList.Size = new System.Drawing.Size(174, 247);
             this.searchedList.TabIndex = 3;
@@ -230,6 +233,7 @@
             this.label2.Size = new System.Drawing.Size(230, 50);
             this.label2.TabIndex = 15;
             this.label2.Text = "Word details";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // radioButton1
             // 
@@ -257,7 +261,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.HelpButton = true;
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(2);
+            this.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Text = "Client";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

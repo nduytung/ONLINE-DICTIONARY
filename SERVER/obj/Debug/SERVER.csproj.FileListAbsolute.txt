@@ -18,3 +18,14 @@ C:\Users\nduyt\Downloads\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csprojResolve
 C:\Users\nduyt\Downloads\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.Server.resources
 C:\Users\nduyt\Downloads\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.Properties.Resources.resources
 C:\Users\nduyt\Downloads\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.GenerateResource.Cache
+D:\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.exe.config
+D:\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.exe
+D:\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.pdb
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csprojAssemblyReference.cache
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.Server.resources
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.Properties.Resources.resources
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.GenerateResource.cache
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CopyComplete
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.exe
+D:\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.pdb

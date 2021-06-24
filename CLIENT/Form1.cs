@@ -108,8 +108,6 @@ namespace CLIENT
             Send();
         }
 
-
-
         //phân giải chuỗi HTML trả về để hiển thị thích hợp 
         void ResolveResult(String plainResult)
         {
@@ -130,9 +128,10 @@ namespace CLIENT
                 }
             }
             webBrowser1.DocumentText = plainResult;
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
-
-
     }
 }
