@@ -82,6 +82,7 @@ namespace SERVER
 
                 byte[] outputByte = Encoding.UTF8.GetBytes(output);
                 client.Send(outputByte);
+                output = null;
             }
             catch
             {

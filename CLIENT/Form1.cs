@@ -74,12 +74,14 @@ namespace CLIENT
             {
                 while (true)
                 {
-                    searchedList.Items.Add("received text for " + tbMessage);
+                  
                     byte[] recv = new byte[1024];
                     stream.Read(recv, 0, recv.Length);
                     plainResult = Encoding.UTF8.GetString(recv);
+                    searchedList.Items.Add(plainResult + "\n");
                     plainResult = plainResult.Replace("+", ": ");
                     plainResult = plainResult.Replace("=", " ");
+
                     ResolveResult(plainResult);
                 }
             }
