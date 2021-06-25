@@ -24,10 +24,10 @@ namespace CLIENT
         TcpClient tcpclient;
         Stream stream;
         string plainResult;
-        string[] meaning = new string[10];
-        string[] type = new string[10];
+        string meaning;
+        string type;
 
-        int count = 0;
+        int count = 1;
 
         //hàm init 
         public Form1()
@@ -70,36 +70,44 @@ namespace CLIENT
         //dưới dạng plain HTML, cần lọc lại và render thành các chuỗi phù hợp 
         void Receive()
         {
-            while (true)
+            try
             {
-                byte[] recv = new byte[1024];
-                stream.Read(recv, 0, recv.Length);
-                plainResult = Encoding.UTF8.GetString(recv);
-                plainResult = plainResult.Replace("+", ": ");
-                plainResult = plainResult.Replace("=", " ");
-                ResolveResult(plainResult);
+                while (true)
+                {
+                    searchedList.Items.Add("received text for " + tbMessage);
+                    byte[] recv = new byte[1024];
+                    stream.Read(recv, 0, recv.Length);
+                    plainResult = Encoding.UTF8.GetString(recv);
+                    plainResult = plainResult.Replace("+", ": ");
+                    plainResult = plainResult.Replace("=", " ");
+                    ResolveResult(plainResult);
+                }
             }
+            catch
+            {
+                MessageBox.Show("Disconnected ");
+            }
+
         }
 
         private void viewMeaningBtn_Click(object sender, EventArgs e)
         {
-            displayInput.Text = meaning[count];
+            displayInput.Text = meaning;
         }
 
         private void viewTypeBtn_Click(object sender, EventArgs e)
         {
-            displayInput.Text = type[count];
+            displayInput.Text = type;
         }
 
         private void exportExcelBtn_Click(object sender, EventArgs e)
         {
             //add to excel 
             Excel excel = new Excel(@"C:\DATA\Save.xlsx", 1);
-            for (int i = 1; i <= count; i++)
-            {
 
-                excel.WriteToCell(i, 1, tbMessage.Text, type[i], meaning[i]);
-            }
+            count++;
+            excel.WriteToCell(count, 1, tbMessage.Text, type, meaning);
+
             excel.Save();
             excel.Close();
         }
@@ -118,12 +126,12 @@ namespace CLIENT
             {
                 if (item.Contains("*"))
                 {
-                    type[count] = item;
+                    type = item;
                     count++;
                 }
                 if (item.Contains("-"))
                 {
-                    meaning[count] = item;
+                    meaning = item;
                     count++;
                     break;
                 }
@@ -133,6 +141,12 @@ namespace CLIENT
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void stopBtn_Click(object sender, EventArgs e)
+        {
+            tcpclient.GetStream().Close();
+            tcpclient.Close();
         }
     }
 }

@@ -45,47 +45,75 @@ namespace SERVER
         //hàm thực hiện kết nối 
         void Connect()
         {
-            ipe = new IPEndPoint(IPAddress.Any, 9999);
-            tcplistener = new TcpListener(ipe);
-            Thread thread = new Thread(() =>
+            try
             {
-                while (true)
+
+                ipe = new IPEndPoint(IPAddress.Any, 9999);
+                tcplistener = new TcpListener(ipe);
+                Thread thread = new Thread(() =>
                 {
-                    tcplistener.Start();
-                    client = tcplistener.AcceptSocket();
-                    Thread rec = new Thread(Receive);
-                    rec.IsBackground = true;
-                    rec.Start(client);
-                }
-            });
+                    while (true)
+                    {
+                        tcplistener.Start();
+                        client = tcplistener.AcceptSocket();
+                        Thread rec = new Thread(Receive);
+                        rec.IsBackground = true;
+                        rec.Start(client);
+                    }
+                });
 
-            thread.IsBackground = true;
-            thread.Start();
-            richTextBox1.Text += ("Server is now ready \n");
+                thread.IsBackground = true;
+                thread.Start();
+                richTextBox1.Text += ("Server is now ready \n");
 
+            }
+            catch
+            {
+                MessageBox.Show("please try again later");
+            }
         }
 
         //hàm trả về dữ liệu cho user 
         //dữ liệu được trả về là 1 chuỗi HTML plain text 
         void Send(Socket client)
         {
-            byte[] outputByte = Encoding.UTF8.GetBytes(output);
-            client.Send(outputByte);
+            try
+            {
+
+                byte[] outputByte = Encoding.UTF8.GetBytes(output);
+                client.Send(outputByte);
+            }
+            catch
+            {
+                MessageBox.Show("Disconnected");
+            }
         }
 
         //nhận chuỗi từ phía client 
         void Receive(Object obj)
         {
-            while (true)
+            try
             {
-                Socket client = obj as Socket;
-                byte[] clientMsg = new byte[1024];
-                client.Receive(clientMsg);
-                input = Encoding.UTF8.GetString(clientMsg);
-                textBox1.Text = input;
-                listView1.Items.Add(input);
-                backgroundWorker1.RunWorkerAsync();
+
+                while (true)
+                {
+
+                    Socket client = obj as Socket;
+                    byte[] clientMsg = new byte[1024];
+                    client.Receive(clientMsg);
+                    input = Encoding.UTF8.GetString(clientMsg);
+                    textBox1.Text = input;
+                    listView1.Items.Add(input);
+                    backgroundWorker1.RunWorkerAsync();
+                }
             }
+            catch
+            {
+                MessageBox.Show("erroe");
+            }
+
+
+
         }
 
         //thực hiện tìm kiếm 
