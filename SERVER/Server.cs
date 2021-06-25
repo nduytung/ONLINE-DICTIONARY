@@ -15,6 +15,9 @@ using MySql.Data.MySqlClient;
 
 namespace SERVER
 {
+
+    //CODE XONG NHO DETACH TAT CA CODE 
+    //FORMAT LAI SAU 
     public partial class Server : Form
     {
         //tương tự như phía CLIENT, các biến này được khai báo GLOBAL để tiện cho parsing và chạy async 
