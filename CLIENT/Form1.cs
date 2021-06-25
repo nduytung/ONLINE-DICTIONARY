@@ -78,7 +78,6 @@ namespace CLIENT
                     byte[] recv = new byte[1024];
                     stream.Read(recv, 0, recv.Length);
                     plainResult = Encoding.UTF8.GetString(recv);
-                    searchedList.Items.Add(plainResult + "\n");
                     plainResult = plainResult.Replace("+", ": ");
                     plainResult = plainResult.Replace("=", " ");
 
@@ -140,15 +139,12 @@ namespace CLIENT
             }
             webBrowser1.DocumentText = plainResult;
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void stopBtn_Click(object sender, EventArgs e)
         {
             tcpclient.GetStream().Close();
             tcpclient.Close();
         }
+
     }
 }
