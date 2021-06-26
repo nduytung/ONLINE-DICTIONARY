@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using _Excel = Microsoft.Office.Interop.Excel;
 
 namespace CLIENT
-{
+{ 
     class Excel
     {
         #region VariableDeclare
