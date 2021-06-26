@@ -18,101 +18,137 @@ namespace CLIENT
     class ServerCommunicate
     {
 
-        IPEndPoint ipe;
+        #region VariableDeclaration
+
         TcpClient tcpclient;
         Stream stream;
         string plainResult;
         string meaning;
         string type;
-        int count = 1;
+        WebBrowser browser;
+        int count;
+        #endregion
 
-        public void Connect(WebBrowser webBrowser1)
+        #region ConnectToServer
+
+        public void Connect(WebBrowser webBrowser, int counter)
         {
+            //thiết lập IP mới và các thông số đầu vào cần thiết
+            IPEndPoint ipe;
+            browser = webBrowser;
+            count = counter;
+
             try
             {
+                //thực hiện kết nối
                 tcpclient = new TcpClient();
                 ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
                 tcpclient.Connect(ipe);
+
+                //tạo thread mới để truyền dữ liệu
                 stream = tcpclient.GetStream();
-                Thread recv = new Thread(() => Receive(webBrowser1));
+
+                //nếu server trả về true thì connect, báo ra cho người dùng biết
+                Thread recv = new Thread(Receive);
                 recv.IsBackground = true;
                 recv.Start();
                 MessageBox.Show("Connected !");
             }
             catch
             {
+                //nếu có bất kỳ lỗi nào, báo ra rằng không thể kết nối
                 MessageBox.Show("The server refused to connect, please try again later");
                 return;
             }
         }
+        #endregion
 
-        public void Send(string message, ListView searchedList)
+        #region Send&Receive&CloseConnection
+
+        public void Send(ListView searchedList, string message)
         {
+            //gửi đata đi 
             byte[] data = Encoding.UTF8.GetBytes(message);
             stream.Write(data, 0, data.Length);
+
+            //hiện lên trên danh sách những từ đã tìm kiếm
             searchedList.Items.Add(message);
         }
 
-        //nhận lại chuỗi trả về từ từ điển 
-        //dưới dạng plain HTML, cần lọc lại và render thành các chuỗi phù hợp 
-        public void Receive(WebBrowser webBrowser1)
+        public void Receive()
         {
             try
             {
                 while (true)
                 {
-
+                    //nhận dữ liệu thô từ server
                     byte[] recv = new byte[1024];
                     stream.Read(recv, 0, recv.Length);
                     plainResult = Encoding.UTF8.GetString(recv);
-                    plainResult = plainResult.Replace("+", ": ");
-                    plainResult = plainResult.Replace("=", " ");
 
-                    ResolveResult(plainResult, webBrowser1);
+                    //chia kết quả vào những thành phần phủ hợp để render ra giao diện
+                    ResolveResult();
                 }
             }
             catch
             {
-                MessageBox.Show("Disconnected ");
+                //nếu không thể nhận data được 
+                MessageBox.Show("Cannot fetch data from server, please try again ");
             }
 
         }
 
-        public void ResolveResult(String plainResult, WebBrowser webBrowser1)
-        {
-            string[] splitter = { "<br />" };
-            string[] temp = plainResult.Split(splitter, StringSplitOptions.None);
-            foreach (string item in temp)
-            {
-                if (item.Contains("*"))
-                {
-                    type = item;
-                    count++;
-                }
-                if (item.Contains("-"))
-                {
-                    meaning = item;
-                    count++;
-                    break;
-                }
-            }
-            webBrowser1.DocumentText = plainResult;
-        }
-
-        public void CloseConnection ()
+        public void CloseConnection()
         {
             tcpclient.GetStream().Close();
             tcpclient.Close();
         }
 
-        public string GetMeaning ()
+        #endregion
+
+        #region HandleDataString
+        public void ResolveResult()
+        {
+            //replace những thành phần thừa mà server trả về 
+            plainResult = plainResult.Replace("+", ": ");
+            plainResult = plainResult.Replace("=", " ");
+
+            //dạng trả về là HTML, nên sẽ có những tag br. tag br ký hiệu cho xuống dòng 
+            string[] splitter = { "<br />" };
+            string[] temp = plainResult.Split(splitter, StringSplitOptions.None);
+
+            //lặp qua mảng temp - nơi lưu dữ liệu đã được cắt thành từng dòng 
+            //dấu * đầu dòng ký hiệu cho loại từ 
+            //dấu - ký hiệu cho nghĩa của từ 
+            foreach (string item in temp)
+            {
+                if (item.Contains("*"))
+                {
+                    type = item;
+                }
+
+                if (item.Contains("-"))
+                {
+                    meaning = item;
+                    break;
+                }
+            }
+
+            //hiển thị toàn bộ data ra browser 
+           browser.DocumentText = plainResult;
+        }
+        #endregion
+
+        #region GetDataToDisplay
+        public string GetMeaning()
         {
             return meaning;
         }
 
-        public string GetWordType ()
+        public string GetWordType()
         {
             return type;
         }
+        #endregion
     }
 }

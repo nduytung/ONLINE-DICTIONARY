@@ -23,15 +23,27 @@ namespace CLIENT
         ServerCommunicate server = new ServerCommunicate();
         #endregion
 
-        //hàm init 
+        #region Initialize 
         public Form1()
         {
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;
-            server.Connect(webBrowser1);
+            server.Connect(webBrowser1, count);
+        }
+        #endregion
+
+
+        #region ButtonClickEvents
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            server.Send(searchedList, tbMessage.Text);
         }
 
-       
+        private void stopBtn_Click(object sender, EventArgs e)
+        {
+            server.CloseConnection();
+        }
 
         private void viewMeaningBtn_Click(object sender, EventArgs e)
         {
@@ -54,16 +66,7 @@ namespace CLIENT
             excel.Save();
             excel.Close();
         }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-            server.Send(tbMessage.Text, searchedList);
-        }
-
-        private void stopBtn_Click(object sender, EventArgs e)
-        {
-            server.CloseConnection();
-        }
+        #endregion
 
     }
 }

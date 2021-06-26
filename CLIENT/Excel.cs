@@ -10,43 +10,45 @@ namespace CLIENT
 {
     class Excel
     {
+        #region VariableDeclare
         string path = " ";
         _Excel.Application excel = new _Excel.Application();
-        Workbook wb;
-        Worksheet ws;
+        Workbook workbook;
+        Worksheet worksheet;
+        #endregion
 
-        public Excel(string path, int Sheet)
+        #region InitializeExcelReference
+        public Excel(string path, int sheet)
         {
             this.path = path;
-            wb = excel.Workbooks.Open(path);
-            ws = wb.Worksheets[Sheet];
+            workbook = excel.Workbooks.Open(path);
+            worksheet = workbook.Worksheets[sheet];
         }
+        #endregion
 
+        #region ExcelControl
 
-        public void WriteToCell(int i, int j, string word, string type, string meaning)
+        public void WriteToCell(int row, int col, string word, string type, string meaning)
         {
-            ws.Cells[i, j].Value2 = word;
-            ws.Cells[i, j + 1].Value2 = type;
-            ws.Cells[i, j + 2].Value2 = meaning;
+            worksheet.Cells[row, col].Value2 = word;
+            worksheet.Cells[row, col + 1].Value2 = type;
+            worksheet.Cells[row, col + 2].Value2 = meaning;
         }
+
         public void Save()
         {
-            wb.Save();
+            workbook.Save();
         }
-
 
         public void SaveAs(string path)
         {
-            wb.SaveAs(path);
-        }
-        public void Close()
-        {
-            wb.Close();
-        }
-        public void Quit()
-        {
-            excel.Quit();
+            workbook.SaveAs(path);
         }
 
+        public void Close()
+        {
+            workbook.Close();
+        }
+        #endregion
     }
 }
