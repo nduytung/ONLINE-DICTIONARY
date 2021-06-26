@@ -37,6 +37,7 @@
             this.searchedList = new System.Windows.Forms.ListView();
             this.searchBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.connectBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.serverIP = new System.Windows.Forms.TextBox();
             this.exportExcelBtn = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.tbMessage = new System.Windows.Forms.RichTextBox();
             this.stopBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.connectBtn = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -132,13 +132,12 @@
             // searchedList
             // 
             this.searchedList.BackColor = System.Drawing.SystemColors.Window;
-            this.searchedList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchedList.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchedList.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.searchedList.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchedList.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.searchedList.HideSelection = false;
             this.searchedList.Location = new System.Drawing.Point(14, 364);
             this.searchedList.Name = "searchedList";
-            this.searchedList.Size = new System.Drawing.Size(183, 318);
+            this.searchedList.Size = new System.Drawing.Size(171, 305);
             this.searchedList.TabIndex = 3;
             this.searchedList.UseCompatibleStateImageBehavior = false;
             this.searchedList.View = System.Windows.Forms.View.List;
@@ -172,6 +171,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 685);
             this.panel1.TabIndex = 14;
+            // 
+            // connectBtn
+            // 
+            this.connectBtn.FlatAppearance.BorderSize = 0;
+            this.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.connectBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectBtn.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.connectBtn.Location = new System.Drawing.Point(144, 140);
+            this.connectBtn.Name = "connectBtn";
+            this.connectBtn.Size = new System.Drawing.Size(53, 35);
+            this.connectBtn.TabIndex = 17;
+            this.connectBtn.Text = "OK";
+            this.connectBtn.UseVisualStyleBackColor = true;
+            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
             // 
             // button2
             // 
@@ -270,20 +283,6 @@
             this.label2.Size = new System.Drawing.Size(230, 50);
             this.label2.TabIndex = 15;
             this.label2.Text = "Word details";
-            // 
-            // connectBtn
-            // 
-            this.connectBtn.FlatAppearance.BorderSize = 0;
-            this.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.connectBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectBtn.ForeColor = System.Drawing.Color.DarkSalmon;
-            this.connectBtn.Location = new System.Drawing.Point(144, 140);
-            this.connectBtn.Name = "connectBtn";
-            this.connectBtn.Size = new System.Drawing.Size(53, 35);
-            this.connectBtn.TabIndex = 17;
-            this.connectBtn.Text = "OK";
-            this.connectBtn.UseVisualStyleBackColor = true;
-            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
             // 
             // Form1
             // 

@@ -19,7 +19,7 @@ namespace CLIENT
     {
 
         #region VariableDeclaration
-        int count = 1;
+        int count = 2;
         ServerCommunicate server = new ServerCommunicate();
         #endregion
 
@@ -63,13 +63,13 @@ namespace CLIENT
         private void exportExcelBtn_Click(object sender, EventArgs e)
         {
             //add to excel 
-            Excel excel = new Excel(@"C:\DATA\Save.xlsx", 1);
+            Excel excel = new Excel(@"C:\Users\nduyt\Downloads\Word.xlsx", 1);
 
-            count++;
             excel.WriteToCell(count, 1, tbMessage.Text, server.GetWordType(), server.GetMeaning());
-
+            count++;
             excel.Save();
             excel.Close();
+            MessageBox.Show("Write successfully !");
         }
 
 

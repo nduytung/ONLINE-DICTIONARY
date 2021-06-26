@@ -72,7 +72,7 @@ namespace CLIENT
             stream.Write(data, 0, data.Length);
 
             //hiện lên trên danh sách những từ đã tìm kiếm
-            searchedList.Items.Add(message);
+            searchedList.Items.Add("- " + message);
         }
 
         public void Receive()
