@@ -41,6 +41,7 @@ namespace CLIENT
         //kết nối với server loop
         void Connect()
         {
+            
             try
             {
                 tcpclient = new TcpClient();
@@ -50,6 +51,7 @@ namespace CLIENT
                 Thread recv = new Thread(Receive);
                 recv.IsBackground = true;
                 recv.Start();
+                MessageBox.Show("Connected !");
             }
             catch
             {
