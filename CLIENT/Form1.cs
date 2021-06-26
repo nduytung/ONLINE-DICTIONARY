@@ -28,16 +28,21 @@ namespace CLIENT
         {
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;
-            server.Connect(webBrowser1, count);
         }
         #endregion
 
 
         #region ButtonClickEvents
 
+        private void connectBtn_Click(object sender, EventArgs e)
+        {
+            server.Connect(webBrowser1, count, serverIP.Text);
+        }
+
         private void searchBtn_Click(object sender, EventArgs e)
         {
             server.Send(searchedList, tbMessage.Text);
+
         }
 
         private void stopBtn_Click(object sender, EventArgs e)
@@ -66,7 +71,11 @@ namespace CLIENT
             excel.Save();
             excel.Close();
         }
+
+
+
         #endregion
 
+       
     }
 }

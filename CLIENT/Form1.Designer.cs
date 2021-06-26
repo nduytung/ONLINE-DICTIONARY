@@ -38,12 +38,13 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.serverIP = new System.Windows.Forms.TextBox();
             this.exportExcelBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbMessage = new System.Windows.Forms.RichTextBox();
             this.stopBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.connectBtn = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,10 +73,10 @@
             // 
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.webBrowser1.Location = new System.Drawing.Point(220, 239);
+            this.webBrowser1.Location = new System.Drawing.Point(220, 229);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(701, 411);
+            this.webBrowser1.Size = new System.Drawing.Size(701, 413);
             this.webBrowser1.TabIndex = 11;
             // 
             // displayInput
@@ -84,7 +85,7 @@
             this.displayInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.displayInput.Enabled = false;
             this.displayInput.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayInput.Location = new System.Drawing.Point(220, 165);
+            this.displayInput.Location = new System.Drawing.Point(220, 172);
             this.displayInput.Multiline = false;
             this.displayInput.Name = "displayInput";
             this.displayInput.Size = new System.Drawing.Size(476, 42);
@@ -132,12 +133,12 @@
             // 
             this.searchedList.BackColor = System.Drawing.SystemColors.Window;
             this.searchedList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchedList.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchedList.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchedList.ForeColor = System.Drawing.SystemColors.GrayText;
             this.searchedList.HideSelection = false;
-            this.searchedList.Location = new System.Drawing.Point(23, 383);
+            this.searchedList.Location = new System.Drawing.Point(14, 364);
             this.searchedList.Name = "searchedList";
-            this.searchedList.Size = new System.Drawing.Size(174, 299);
+            this.searchedList.Size = new System.Drawing.Size(183, 318);
             this.searchedList.TabIndex = 3;
             this.searchedList.UseCompatibleStateImageBehavior = false;
             this.searchedList.View = System.Windows.Forms.View.List;
@@ -158,7 +159,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.connectBtn);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.serverIP);
             this.panel1.Controls.Add(this.exportExcelBtn);
             this.panel1.Controls.Add(button1);
             this.panel1.Controls.Add(this.viewMeaningBtn);
@@ -187,6 +190,16 @@
             this.button2.Text = "  Searched wordlist";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // serverIP
+            // 
+            this.serverIP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serverIP.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.serverIP.Location = new System.Drawing.Point(14, 147);
+            this.serverIP.Name = "serverIP";
+            this.serverIP.Size = new System.Drawing.Size(126, 25);
+            this.serverIP.TabIndex = 16;
+            this.serverIP.Text = "Server IP";
             // 
             // exportExcelBtn
             // 
@@ -247,29 +260,30 @@
             this.stopBtn.UseVisualStyleBackColor = true;
             this.stopBtn.Click += new System.EventHandler(this.stopBtn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(216, 665);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 21);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Originally created by team 3";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(222, 107);
+            this.label2.Location = new System.Drawing.Point(208, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(230, 50);
             this.label2.TabIndex = 15;
             this.label2.Text = "Word details";
+            // 
+            // connectBtn
+            // 
+            this.connectBtn.FlatAppearance.BorderSize = 0;
+            this.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.connectBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectBtn.ForeColor = System.Drawing.Color.DarkSalmon;
+            this.connectBtn.Location = new System.Drawing.Point(144, 140);
+            this.connectBtn.Name = "connectBtn";
+            this.connectBtn.Size = new System.Drawing.Size(53, 35);
+            this.connectBtn.TabIndex = 17;
+            this.connectBtn.Text = "OK";
+            this.connectBtn.UseVisualStyleBackColor = true;
+            this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
             // 
             // Form1
             // 
@@ -280,7 +294,6 @@
             this.ClientSize = new System.Drawing.Size(932, 691);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.displayInput);
             this.Controls.Add(this.webBrowser1);
@@ -290,6 +303,7 @@
             this.Padding = new System.Windows.Forms.Padding(2, 4, 2, 2);
             this.Text = "Client";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,11 +320,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button exportExcelBtn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button stopBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox tbMessage;
+        private System.Windows.Forms.TextBox serverIP;
+        private System.Windows.Forms.Button connectBtn;
     }
 }
 

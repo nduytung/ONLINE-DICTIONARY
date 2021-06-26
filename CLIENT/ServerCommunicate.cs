@@ -31,7 +31,7 @@ namespace CLIENT
 
         #region ConnectToServer
 
-        public void Connect(WebBrowser webBrowser, int counter)
+        public void Connect(WebBrowser webBrowser, int counter, string serverIP)
         {
             //thiết lập IP mới và các thông số đầu vào cần thiết
             IPEndPoint ipe;
@@ -42,7 +42,7 @@ namespace CLIENT
             {
                 //thực hiện kết nối
                 tcpclient = new TcpClient();
-                ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
+                ipe = new IPEndPoint(IPAddress.Parse(serverIP), 9999);
                 tcpclient.Connect(ipe);
 
                 //tạo thread mới để truyền dữ liệu
