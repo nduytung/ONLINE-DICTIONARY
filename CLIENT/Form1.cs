@@ -18,89 +18,29 @@ namespace CLIENT
     public partial class Form1 : Form
     {
 
-        //vì được parsing qua lại giữa nhiều function, thậm chí là async, nên các biến này sẽ được khai báo GLOBAL
-        //
-        IPEndPoint ipe;
-        TcpClient tcpclient;
-        Stream stream;
-        string plainResult;
-        string meaning;
-        string type;
-
+        #region VariableDeclaration
         int count = 1;
+        ServerCommunicate server = new ServerCommunicate();
+        #endregion
 
         //hàm init 
         public Form1()
         {
             InitializeComponent();
             Control.CheckForIllegalCrossThreadCalls = false;
-            Connect();
-
+            server.Connect(webBrowser1);
         }
 
-        //kết nối với server loop
-        void Connect()
-        {
-            
-            try
-            {
-                tcpclient = new TcpClient();
-                ipe = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
-                tcpclient.Connect(ipe);
-                stream = tcpclient.GetStream();
-                Thread recv = new Thread(Receive);
-                recv.IsBackground = true;
-                recv.Start();
-                MessageBox.Show("Connected !");
-            }
-            catch
-            {
-                MessageBox.Show("The server refused to connect, please try again later");
-                return;
-            }
-        }
-
-        //hàm gửi đi chuỗi cần tìm 
-        void Send()
-        {
-            byte[] data = Encoding.UTF8.GetBytes(tbMessage.Text);
-            stream.Write(data, 0, data.Length);
-            searchedList.Items.Add(tbMessage.Text);
-        }
-
-        //nhận lại chuỗi trả về từ từ điển 
-        //dưới dạng plain HTML, cần lọc lại và render thành các chuỗi phù hợp 
-        void Receive()
-        {
-            try
-            {
-                while (true)
-                {
-                  
-                    byte[] recv = new byte[1024];
-                    stream.Read(recv, 0, recv.Length);
-                    plainResult = Encoding.UTF8.GetString(recv);
-                    plainResult = plainResult.Replace("+", ": ");
-                    plainResult = plainResult.Replace("=", " ");
-
-                    ResolveResult(plainResult);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Disconnected ");
-            }
-
-        }
+       
 
         private void viewMeaningBtn_Click(object sender, EventArgs e)
         {
-            displayInput.Text = meaning;
+            displayInput.Text = server.GetMeaning();
         }
 
         private void viewTypeBtn_Click(object sender, EventArgs e)
         {
-            displayInput.Text = type;
+            displayInput.Text = server.GetWordType();
         }
 
         private void exportExcelBtn_Click(object sender, EventArgs e)
@@ -109,7 +49,7 @@ namespace CLIENT
             Excel excel = new Excel(@"C:\DATA\Save.xlsx", 1);
 
             count++;
-            excel.WriteToCell(count, 1, tbMessage.Text, type, meaning);
+            excel.WriteToCell(count, 1, tbMessage.Text, server.GetWordType(), server.GetMeaning());
 
             excel.Save();
             excel.Close();
@@ -117,35 +57,12 @@ namespace CLIENT
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            Send();
-        }
-
-        //phân giải chuỗi HTML trả về để hiển thị thích hợp 
-        void ResolveResult(String plainResult)
-        {
-            string[] splitter = { "<br />" };
-            string[] temp = plainResult.Split(splitter, StringSplitOptions.None);
-            foreach (string item in temp)
-            {
-                if (item.Contains("*"))
-                {
-                    type = item;
-                    count++;
-                }
-                if (item.Contains("-"))
-                {
-                    meaning = item;
-                    count++;
-                    break;
-                }
-            }
-            webBrowser1.DocumentText = plainResult;
+            server.Send(tbMessage.Text, searchedList);
         }
 
         private void stopBtn_Click(object sender, EventArgs e)
         {
-            tcpclient.GetStream().Close();
-            tcpclient.Close();
+            server.CloseConnection();
         }
 
     }
