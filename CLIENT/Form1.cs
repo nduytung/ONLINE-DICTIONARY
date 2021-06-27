@@ -62,14 +62,25 @@ namespace CLIENT
 
         private void exportExcelBtn_Click(object sender, EventArgs e)
         {
-            //add to excel 
-            Excel excel = new Excel(@"C:\Users\nduyt\Downloads\Word.xlsx", 1);
+            //add to excel
+            try
+            {
+                MessageBox.Show("Please create a 'report' file on your Desktop");
+                var name = "report.xlsx";
+                var dicrec = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                var fullpath = Path.Combine(dicrec, name);
+                Excel excel = new Excel(fullpath, 1);
 
-            excel.WriteToCell(count, 1, tbMessage.Text, server.GetWordType(), server.GetMeaning());
-            count++;
-            excel.Save();
-            excel.Close();
-            MessageBox.Show("Write successfully !");
+                excel.WriteToCell(count, 1, tbMessage.Text, server.GetWordType(), server.GetMeaning());
+                count++;
+                excel.Save();
+                excel.Close();
+                MessageBox.Show("Write successfully !");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Make sure the file 'report' exists!");
+            }
         }
 
 
