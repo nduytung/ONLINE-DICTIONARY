@@ -31,7 +31,7 @@ namespace CLIENT
 
         #region ConnectToServer
 
-        public void Connect(WebBrowser webBrowser, int counter, string serverIP)
+        public void Connect(WebBrowser webBrowser, int counter, string serverIP, Button connectBtn)
         {
             //thiết lập IP mới và các thông số đầu vào cần thiết
             IPEndPoint ipe;
@@ -42,8 +42,19 @@ namespace CLIENT
             {
                 //thực hiện kết nối
                 tcpclient = new TcpClient();
-                ipe = new IPEndPoint(IPAddress.Parse(serverIP), 9999);
-                tcpclient.Connect(ipe);
+                try
+                {
+
+                    ipe = new IPEndPoint(IPAddress.Parse(serverIP), 9999);
+                    tcpclient.Connect(ipe);
+                    connectBtn.Enabled = false;
+
+                }
+                catch
+                {
+                    MessageBox.Show("Your IP address is probably wrong, please check it out ");
+                    return;
+                }
 
                 //tạo thread mới để truyền dữ liệu
                 stream = tcpclient.GetStream();
@@ -135,7 +146,7 @@ namespace CLIENT
             }
 
             //hiển thị toàn bộ data ra browser 
-           browser.DocumentText = plainResult;
+            browser.DocumentText = plainResult;
         }
         #endregion
 

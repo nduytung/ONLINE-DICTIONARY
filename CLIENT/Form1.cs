@@ -32,13 +32,11 @@ namespace CLIENT
         }
         #endregion
 
-
         #region ButtonClickEvents
 
         private void connectBtn_Click(object sender, EventArgs e)
         {
-            server.Connect(webBrowser1, count, serverIP.Text);
-            connectBtn.Enabled = false;
+            server.Connect(webBrowser1, count, serverIP.Text, connectBtn);
         }
 
         private void searchBtn_Click(object sender, EventArgs e)

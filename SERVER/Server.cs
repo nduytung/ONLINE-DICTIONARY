@@ -122,7 +122,7 @@ namespace SERVER
             }
             catch
             {
-                MessageBox.Show("No signal, please try again");
+                MessageBox.Show("Client has been disconnected, please try again");
             }
 
 
