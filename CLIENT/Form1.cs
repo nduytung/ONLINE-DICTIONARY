@@ -21,7 +21,7 @@ namespace CLIENT
         #region VariableDeclaration
         int count = 2;
         ServerCommunicate server = new ServerCommunicate();
-        string language = "Eng";
+        string language = "Vie";
         #endregion
 
         #region Initialize 
@@ -41,6 +41,11 @@ namespace CLIENT
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
+            if (serverIP.Text.Contains("Server IP"))
+            {
+                MessageBox.Show("Please fill in IP address");
+                return;
+            }
             server.Send(searchedList, tbMessage.Text);
 
         }
@@ -114,5 +119,9 @@ namespace CLIENT
 
         #endregion
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

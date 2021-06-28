@@ -53,13 +53,13 @@
             // 
             // button1
             // 
-            button1.BackColor = System.Drawing.Color.LightCoral;
+            button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(28)))), ((int)(((byte)(55)))));
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             button1.Cursor = System.Windows.Forms.Cursors.Hand;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            button1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            button1.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             button1.Location = new System.Drawing.Point(0, 0);
             button1.Margin = new System.Windows.Forms.Padding(0);
@@ -77,15 +77,15 @@
             this.webBrowser1.Location = new System.Drawing.Point(220, 229);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(701, 413);
+            this.webBrowser1.Size = new System.Drawing.Size(701, 444);
             this.webBrowser1.TabIndex = 11;
             // 
             // displayInput
             // 
-            this.displayInput.BackColor = System.Drawing.Color.White;
+            this.displayInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.displayInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.displayInput.Enabled = false;
             this.displayInput.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayInput.ForeColor = System.Drawing.SystemColors.Window;
             this.displayInput.Location = new System.Drawing.Point(220, 172);
             this.displayInput.Multiline = false;
             this.displayInput.Name = "displayInput";
@@ -95,12 +95,12 @@
             // 
             // viewTypeBtn
             // 
-            this.viewTypeBtn.BackColor = System.Drawing.Color.White;
+            this.viewTypeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.viewTypeBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.viewTypeBtn.FlatAppearance.BorderSize = 0;
             this.viewTypeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewTypeBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewTypeBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.viewTypeBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.viewTypeBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewTypeBtn.Image")));
             this.viewTypeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.viewTypeBtn.Location = new System.Drawing.Point(14, 223);
@@ -116,11 +116,11 @@
             // 
             // viewMeaningBtn
             // 
-            this.viewMeaningBtn.BackColor = System.Drawing.Color.White;
+            this.viewMeaningBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.viewMeaningBtn.FlatAppearance.BorderSize = 0;
             this.viewMeaningBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewMeaningBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewMeaningBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.viewMeaningBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.viewMeaningBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewMeaningBtn.Image")));
             this.viewMeaningBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.viewMeaningBtn.Location = new System.Drawing.Point(14, 177);
@@ -136,9 +136,9 @@
             // 
             // searchedList
             // 
-            this.searchedList.BackColor = System.Drawing.SystemColors.Window;
-            this.searchedList.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchedList.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.searchedList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
+            this.searchedList.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchedList.ForeColor = System.Drawing.SystemColors.Control;
             this.searchedList.HideSelection = false;
             this.searchedList.Location = new System.Drawing.Point(14, 364);
             this.searchedList.Name = "searchedList";
@@ -152,6 +152,7 @@
             this.searchBtn.FlatAppearance.BorderSize = 2;
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.ForeColor = System.Drawing.Color.Silver;
             this.searchBtn.Location = new System.Drawing.Point(512, 15);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(84, 38);
@@ -162,7 +163,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.panel1.Controls.Add(this.connectBtn);
             this.panel1.Controls.Add(this.wordListTitle);
             this.panel1.Controls.Add(this.serverIP);
@@ -182,8 +183,8 @@
             this.connectBtn.FlatAppearance.BorderSize = 0;
             this.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.connectBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connectBtn.ForeColor = System.Drawing.Color.DarkSalmon;
-            this.connectBtn.Location = new System.Drawing.Point(144, 140);
+            this.connectBtn.ForeColor = System.Drawing.Color.Silver;
+            this.connectBtn.Location = new System.Drawing.Point(144, 131);
             this.connectBtn.Name = "connectBtn";
             this.connectBtn.Size = new System.Drawing.Size(53, 35);
             this.connectBtn.TabIndex = 17;
@@ -193,12 +194,12 @@
             // 
             // wordListTitle
             // 
-            this.wordListTitle.BackColor = System.Drawing.Color.White;
+            this.wordListTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.wordListTitle.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.wordListTitle.FlatAppearance.BorderSize = 0;
             this.wordListTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wordListTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wordListTitle.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.wordListTitle.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.wordListTitle.Image = ((System.Drawing.Image)(resources.GetObject("wordListTitle.Image")));
             this.wordListTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.wordListTitle.Location = new System.Drawing.Point(14, 315);
@@ -213,22 +214,25 @@
             // 
             // serverIP
             // 
-            this.serverIP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serverIP.BackColor = System.Drawing.Color.DarkGray;
+            this.serverIP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.serverIP.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serverIP.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.serverIP.Location = new System.Drawing.Point(14, 147);
+            this.serverIP.Location = new System.Drawing.Point(14, 136);
+            this.serverIP.Multiline = true;
             this.serverIP.Name = "serverIP";
-            this.serverIP.Size = new System.Drawing.Size(126, 25);
+            this.serverIP.Size = new System.Drawing.Size(137, 30);
             this.serverIP.TabIndex = 16;
             this.serverIP.Text = "Server IP";
             // 
             // exportExcelBtn
             // 
-            this.exportExcelBtn.BackColor = System.Drawing.Color.White;
+            this.exportExcelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.exportExcelBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.exportExcelBtn.FlatAppearance.BorderSize = 0;
             this.exportExcelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exportExcelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportExcelBtn.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.exportExcelBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.exportExcelBtn.Image = ((System.Drawing.Image)(resources.GetObject("exportExcelBtn.Image")));
             this.exportExcelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exportExcelBtn.Location = new System.Drawing.Point(14, 269);
@@ -244,7 +248,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightCoral;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(28)))), ((int)(((byte)(55)))));
             this.panel2.Controls.Add(this.tbMessage);
             this.panel2.Controls.Add(this.stopBtn);
             this.panel2.Controls.Add(this.searchBtn);
@@ -258,9 +262,10 @@
             // 
             this.tbMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbMessage.BackColor = System.Drawing.Color.White;
+            this.tbMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(46)))), ((int)(((byte)(84)))));
             this.tbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMessage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMessage.ForeColor = System.Drawing.SystemColors.Window;
             this.tbMessage.Location = new System.Drawing.Point(237, 15);
             this.tbMessage.Multiline = false;
             this.tbMessage.Name = "tbMessage";
@@ -274,6 +279,7 @@
             this.stopBtn.FlatAppearance.BorderSize = 2;
             this.stopBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stopBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stopBtn.ForeColor = System.Drawing.Color.Silver;
             this.stopBtn.Location = new System.Drawing.Point(611, 15);
             this.stopBtn.Name = "stopBtn";
             this.stopBtn.Size = new System.Drawing.Size(84, 38);
@@ -295,14 +301,14 @@
             // 
             // languageBtn
             // 
-            this.languageBtn.BackColor = System.Drawing.Color.DimGray;
+            this.languageBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(28)))), ((int)(((byte)(55)))));
             this.languageBtn.FlatAppearance.BorderSize = 0;
             this.languageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.languageBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.languageBtn.ForeColor = System.Drawing.Color.Salmon;
+            this.languageBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.languageBtn.Location = new System.Drawing.Point(868, 82);
             this.languageBtn.Name = "languageBtn";
-            this.languageBtn.Size = new System.Drawing.Size(53, 27);
+            this.languageBtn.Size = new System.Drawing.Size(53, 35);
             this.languageBtn.TabIndex = 17;
             this.languageBtn.Text = "Vie";
             this.languageBtn.UseVisualStyleBackColor = false;
@@ -312,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(54)))), ((int)(((byte)(101)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(932, 691);
             this.Controls.Add(this.languageBtn);
@@ -326,6 +332,7 @@
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(2, 4, 2, 2);
             this.Text = "Client";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
