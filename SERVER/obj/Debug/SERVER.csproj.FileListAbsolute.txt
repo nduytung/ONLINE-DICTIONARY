@@ -29,14 +29,3 @@ D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
 D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CopyComplete
 D:\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.exe
 D:\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.pdb
-D:\github\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.exe.config
-D:\github\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.exe
-D:\github\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.pdb
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.AssemblyReference.cache
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.Server.resources
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.Properties.Resources.resources
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.GenerateResource.cache
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CopyComplete
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.exe
-D:\github\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.pdb
