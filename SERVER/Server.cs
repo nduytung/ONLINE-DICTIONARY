@@ -142,9 +142,6 @@ namespace SERVER
             {
                 MessageBox.Show("Client has been disconnected, please try again");
             }
-
-
-
         }
         #endregion
 
