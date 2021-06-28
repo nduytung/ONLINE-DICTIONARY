@@ -15,8 +15,6 @@ using MySql.Data.MySqlClient;
 
 namespace SERVER
 {
-
-
     public partial class Server : Form
     {
       
@@ -183,7 +181,6 @@ namespace SERVER
             return;
         }
         #endregion
-
 
     }
 }
