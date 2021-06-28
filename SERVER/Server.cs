@@ -17,16 +17,13 @@ namespace SERVER
 {
     public partial class Server : Form
     {
-
+      
         #region VariableDeclaration
         IPEndPoint ipe;
         Socket client;
         TcpListener tcplistener;
         string input;
-        string output = "";
-        string dbName;
-        string dbUID;
-        string dbPassword;
+        string output;
         #endregion
 
         #region Initialize
@@ -52,15 +49,6 @@ namespace SERVER
         //hàm thực hiện kết nối 
         void Connect()
         {
-            if (name.Text == "" || UID.Text == "" || password.Text == "")
-            {
-                MessageBox.Show("Please fill in db name, UID and password");
-                return;
-            }
-            dbName = name.Text;
-            dbPassword = password.Text;
-            dbUID = UID.Text;
-
             try
             {
                 //tạo 1 IP Endpoint mới 
@@ -98,19 +86,12 @@ namespace SERVER
         {
             try
             {
-                byte[] outputByte;
                 //mã hóa chuỗi thành các byte để gửi 
-                if (output != "")
-                {
-                    outputByte = Encoding.UTF8.GetBytes(output);
-                    //làm trống output, sẵn sàng nhận dữ liệu tiếp theo từ user 
-                    output = null;
-                }
-                else
-                {
-                    outputByte = Encoding.UTF8.GetBytes("NOT FOUND");
-                }
+                byte[] outputByte = Encoding.UTF8.GetBytes(output);
                 client.Send(outputByte);
+
+                //làm trống output, sẵn sàng nhận dữ liệu tiếp theo từ user 
+                output = null;
             }
             catch
             {
@@ -135,6 +116,7 @@ namespace SERVER
 
                     //hiển thị vào danh sách đã nhận và màn hình trạng thái 
                     textBox1.Text = input;
+                    listView1.Items.Add(input);
                     backgroundWorker1.RunWorkerAsync();
                 }
             }
@@ -142,6 +124,9 @@ namespace SERVER
             {
                 MessageBox.Show("Client has been disconnected, please try again");
             }
+
+
+
         }
         #endregion
 
@@ -149,7 +134,7 @@ namespace SERVER
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             //thiết lập connection mới cho mySQL 
-            MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=" + dbName + ";uid=" + dbUID + ";password=" + dbPassword);
+            MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=dictionarydb;uid=root;password=hau210701");
             MySqlCommand cmd = dbConn.CreateCommand();
 
             //thiết lập câu lệnh truy vấn từ database 
@@ -186,16 +171,8 @@ namespace SERVER
         {
             //hiển thị sau khi tìm kiếm hoàn tất 
             //gửi đi cho client 
-            if (output != "")
-            {
-
-                richTextBox1.Text = "\n STATUS: DONE \n" + output;
-                Send(client);
-                return;
-            }
-            richTextBox1.Text = "\n NOT FOUND !";
+            richTextBox1.Text = "\n STATUS: DONE \n" + output;
             Send(client);
-
         }
 
 
