@@ -68,7 +68,7 @@
             this.textBox1.Location = new System.Drawing.Point(365, 54);
             this.textBox1.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 26);
+            this.textBox1.Size = new System.Drawing.Size(387, 32);
             this.textBox1.TabIndex = 2;
             // 
             // connectBtn
@@ -94,7 +94,7 @@
             this.label1.ForeColor = System.Drawing.Color.Snow;
             this.label1.Location = new System.Drawing.Point(237, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 32);
+            this.label1.Size = new System.Drawing.Size(136, 41);
             this.label1.TabIndex = 5;
             this.label1.Text = "Received";
             // 
@@ -120,7 +120,7 @@
             this.label4.ForeColor = System.Drawing.Color.Snow;
             this.label4.Location = new System.Drawing.Point(2, 271);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 32);
+            this.label4.Size = new System.Drawing.Size(143, 41);
             this.label4.TabIndex = 9;
             this.label4.Text = "Password";
             // 
@@ -131,7 +131,7 @@
             this.label5.ForeColor = System.Drawing.Color.Snow;
             this.label5.Location = new System.Drawing.Point(2, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 32);
+            this.label5.Size = new System.Drawing.Size(68, 41);
             this.label5.TabIndex = 10;
             this.label5.Text = "UID";
             // 
@@ -142,7 +142,7 @@
             this.label6.ForeColor = System.Drawing.Color.Snow;
             this.label6.Location = new System.Drawing.Point(2, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 32);
+            this.label6.Size = new System.Drawing.Size(138, 41);
             this.label6.TabIndex = 11;
             this.label6.Text = "DB name";
             // 
@@ -154,7 +154,8 @@
             this.password.Location = new System.Drawing.Point(8, 312);
             this.password.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(223, 26);
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(223, 32);
             this.password.TabIndex = 13;
             // 
             // UID
@@ -165,7 +166,7 @@
             this.UID.Location = new System.Drawing.Point(8, 236);
             this.UID.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.UID.Name = "UID";
-            this.UID.Size = new System.Drawing.Size(223, 26);
+            this.UID.Size = new System.Drawing.Size(223, 32);
             this.UID.TabIndex = 14;
             // 
             // name
@@ -176,12 +177,12 @@
             this.name.Location = new System.Drawing.Point(8, 160);
             this.name.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(223, 26);
+            this.name.Size = new System.Drawing.Size(223, 32);
             this.name.TabIndex = 15;
             // 
             // Server
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 41F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(767, 428);
@@ -196,7 +197,7 @@
             this.Controls.Add(this.connectBtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.richTextBox1);
-            this.Font = new System.Drawing.Font("Bungee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.Name = "Server";
