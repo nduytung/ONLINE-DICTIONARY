@@ -21,6 +21,7 @@ namespace CLIENT
         #region VariableDeclaration
         int count = 2;
         ServerCommunicate server = new ServerCommunicate();
+        string language = "Eng";
         #endregion
 
         #region Initialize 
@@ -37,6 +38,7 @@ namespace CLIENT
         private void connectBtn_Click(object sender, EventArgs e)
         {
             server.Connect(webBrowser1, count, serverIP.Text);
+            connectBtn.Enabled = false;
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -62,20 +64,57 @@ namespace CLIENT
 
         private void exportExcelBtn_Click(object sender, EventArgs e)
         {
-            //add to excel 
-            Excel excel = new Excel(@"C:\Users\nduyt\Downloads\Word.xlsx", 1);
-
-            excel.WriteToCell(count, 1, tbMessage.Text, server.GetWordType(), server.GetMeaning());
-            count++;
-            excel.Save();
-            excel.Close();
-            MessageBox.Show("Write successfully !");
+            //add to excel
+            try
+            {
+                MessageBox.Show("Please create a 'report' file on your Desktop");
+                var name = "report.xlsx";
+                var dicrec = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                var fullpath = Path.Combine(dicrec, name);
+                Excel excel = new Excel(fullpath, 1);
+                excel.WriteToCell(1, 1, "TỪ VỤNG", "LOẠI TỪ", "NGHĨA CỦA TỪ");
+                excel.WriteToCell(count, 1, tbMessage.Text, server.GetWordType(), server.GetMeaning());
+                count++;
+                excel.Save();
+                excel.Close();
+                MessageBox.Show("Write successfully !");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Make sure the file 'report' exists!");
+            }
         }
 
+
+        private void languageBtn_Click(object sender, EventArgs e)
+        {
+            if (language == "Eng")
+            {
+                searchBtn.Text = "Tìm";
+                stopBtn.Text = "Dừng";
+                viewMeaningBtn.Text = "  Xem nghĩa từ";
+                viewTypeBtn.Text = "  Xem loại từ";
+                exportExcelBtn.Text = "  Xuất file Excel";
+                wordListTitle.Text = "  Danh sách từ";
+                wordDetail.Text = "  Chi tiết từ";
+                languageBtn.Text = "Vie";
+                language = "Vie";
+            } else if (language == "Vie")
+            {
+                searchBtn.Text = "Search";
+                stopBtn.Text = "Stop";
+                viewMeaningBtn.Text = "  View meaning";
+                viewTypeBtn.Text = "  View word type";
+                exportExcelBtn.Text = "  Export to Excel";
+                wordListTitle.Text = "  Searched list";
+                wordDetail.Text = "  Word details";
+                languageBtn.Text = "Eng";
+                language = "Eng";
+            }
+        }
 
 
         #endregion
 
-       
     }
 }

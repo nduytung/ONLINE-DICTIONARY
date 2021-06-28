@@ -38,13 +38,14 @@
             this.searchBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.connectBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.wordListTitle = new System.Windows.Forms.Button();
             this.serverIP = new System.Windows.Forms.TextBox();
             this.exportExcelBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbMessage = new System.Windows.Forms.RichTextBox();
             this.stopBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.wordDetail = new System.Windows.Forms.Label();
+            this.languageBtn = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,12 +102,14 @@
             this.viewTypeBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewTypeBtn.ForeColor = System.Drawing.SystemColors.GrayText;
             this.viewTypeBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewTypeBtn.Image")));
-            this.viewTypeBtn.Location = new System.Drawing.Point(0, 223);
+            this.viewTypeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.viewTypeBtn.Location = new System.Drawing.Point(14, 223);
             this.viewTypeBtn.Margin = new System.Windows.Forms.Padding(0);
             this.viewTypeBtn.Name = "viewTypeBtn";
-            this.viewTypeBtn.Size = new System.Drawing.Size(200, 46);
+            this.viewTypeBtn.Size = new System.Drawing.Size(186, 46);
             this.viewTypeBtn.TabIndex = 5;
             this.viewTypeBtn.Text = "   View word type";
+            this.viewTypeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.viewTypeBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.viewTypeBtn.UseVisualStyleBackColor = false;
             this.viewTypeBtn.Click += new System.EventHandler(this.viewTypeBtn_Click);
@@ -119,12 +122,14 @@
             this.viewMeaningBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewMeaningBtn.ForeColor = System.Drawing.SystemColors.GrayText;
             this.viewMeaningBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewMeaningBtn.Image")));
-            this.viewMeaningBtn.Location = new System.Drawing.Point(0, 177);
+            this.viewMeaningBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.viewMeaningBtn.Location = new System.Drawing.Point(14, 177);
             this.viewMeaningBtn.Margin = new System.Windows.Forms.Padding(0);
             this.viewMeaningBtn.Name = "viewMeaningBtn";
-            this.viewMeaningBtn.Size = new System.Drawing.Size(200, 46);
+            this.viewMeaningBtn.Size = new System.Drawing.Size(186, 46);
             this.viewMeaningBtn.TabIndex = 4;
             this.viewMeaningBtn.Text = "  View meaning";
+            this.viewMeaningBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.viewMeaningBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.viewMeaningBtn.UseVisualStyleBackColor = false;
             this.viewMeaningBtn.Click += new System.EventHandler(this.viewMeaningBtn_Click);
@@ -159,7 +164,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.connectBtn);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.wordListTitle);
             this.panel1.Controls.Add(this.serverIP);
             this.panel1.Controls.Add(this.exportExcelBtn);
             this.panel1.Controls.Add(button1);
@@ -186,23 +191,25 @@
             this.connectBtn.UseVisualStyleBackColor = true;
             this.connectBtn.Click += new System.EventHandler(this.connectBtn_Click);
             // 
-            // button2
+            // wordListTitle
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(0, 315);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(200, 46);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "  Searched wordlist";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.wordListTitle.BackColor = System.Drawing.Color.White;
+            this.wordListTitle.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.wordListTitle.FlatAppearance.BorderSize = 0;
+            this.wordListTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wordListTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wordListTitle.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.wordListTitle.Image = ((System.Drawing.Image)(resources.GetObject("wordListTitle.Image")));
+            this.wordListTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.wordListTitle.Location = new System.Drawing.Point(14, 315);
+            this.wordListTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.wordListTitle.Name = "wordListTitle";
+            this.wordListTitle.Size = new System.Drawing.Size(186, 46);
+            this.wordListTitle.TabIndex = 7;
+            this.wordListTitle.Text = "  Searched wordlist";
+            this.wordListTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.wordListTitle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.wordListTitle.UseVisualStyleBackColor = false;
             // 
             // serverIP
             // 
@@ -223,12 +230,14 @@
             this.exportExcelBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exportExcelBtn.ForeColor = System.Drawing.SystemColors.GrayText;
             this.exportExcelBtn.Image = ((System.Drawing.Image)(resources.GetObject("exportExcelBtn.Image")));
-            this.exportExcelBtn.Location = new System.Drawing.Point(0, 269);
+            this.exportExcelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exportExcelBtn.Location = new System.Drawing.Point(14, 269);
             this.exportExcelBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exportExcelBtn.Name = "exportExcelBtn";
-            this.exportExcelBtn.Size = new System.Drawing.Size(200, 46);
+            this.exportExcelBtn.Size = new System.Drawing.Size(186, 46);
             this.exportExcelBtn.TabIndex = 6;
             this.exportExcelBtn.Text = "   Export to Excel";
+            this.exportExcelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.exportExcelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.exportExcelBtn.UseVisualStyleBackColor = false;
             this.exportExcelBtn.Click += new System.EventHandler(this.exportExcelBtn_Click);
@@ -273,16 +282,31 @@
             this.stopBtn.UseVisualStyleBackColor = true;
             this.stopBtn.Click += new System.EventHandler(this.stopBtn_Click);
             // 
-            // label2
+            // wordDetail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(208, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 50);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Word details";
+            this.wordDetail.AutoSize = true;
+            this.wordDetail.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wordDetail.ForeColor = System.Drawing.Color.White;
+            this.wordDetail.Location = new System.Drawing.Point(211, 119);
+            this.wordDetail.Name = "wordDetail";
+            this.wordDetail.Size = new System.Drawing.Size(230, 50);
+            this.wordDetail.TabIndex = 15;
+            this.wordDetail.Text = "Word details";
+            // 
+            // languageBtn
+            // 
+            this.languageBtn.BackColor = System.Drawing.Color.DimGray;
+            this.languageBtn.FlatAppearance.BorderSize = 0;
+            this.languageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.languageBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.languageBtn.ForeColor = System.Drawing.Color.Salmon;
+            this.languageBtn.Location = new System.Drawing.Point(868, 82);
+            this.languageBtn.Name = "languageBtn";
+            this.languageBtn.Size = new System.Drawing.Size(53, 27);
+            this.languageBtn.TabIndex = 17;
+            this.languageBtn.Text = "Vie";
+            this.languageBtn.UseVisualStyleBackColor = false;
+            this.languageBtn.Click += new System.EventHandler(this.languageBtn_Click);
             // 
             // Form1
             // 
@@ -291,7 +315,8 @@
             this.BackColor = System.Drawing.Color.LightGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(932, 691);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.languageBtn);
+            this.Controls.Add(this.wordDetail);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.displayInput);
@@ -319,12 +344,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button exportExcelBtn;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label wordDetail;
         private System.Windows.Forms.Button stopBtn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button wordListTitle;
         private System.Windows.Forms.RichTextBox tbMessage;
         private System.Windows.Forms.TextBox serverIP;
         private System.Windows.Forms.Button connectBtn;
+        private System.Windows.Forms.Button languageBtn;
     }
 }
 

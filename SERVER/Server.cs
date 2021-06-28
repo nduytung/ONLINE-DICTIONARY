@@ -40,6 +40,7 @@ namespace SERVER
         private void connectBtn_Click(object sender, EventArgs e)
         {
             Connect();
+            connectBtn.Enabled = false;
         }
 
         #endregion

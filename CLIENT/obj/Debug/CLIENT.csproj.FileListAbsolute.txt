@@ -30,3 +30,15 @@ D:\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
 D:\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
 D:\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.exe
 D:\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.pdb
+D:\github\ONLINE-DICTIONARY\CLIENT\bin\Debug\CLIENT.exe.config
+D:\github\ONLINE-DICTIONARY\CLIENT\bin\Debug\CLIENT.exe
+D:\github\ONLINE-DICTIONARY\CLIENT\bin\Debug\CLIENT.pdb
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.AssemblyReference.cache
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\Interop.ACTIVEXLib.dll
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.ResolveComReference.cache
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.Form1.resources
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.exe
+D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.pdb
