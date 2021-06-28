@@ -134,7 +134,7 @@ namespace SERVER
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             //thiết lập connection mới cho mySQL 
-            MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=dictionarydb;uid=root;password=REACTer_1611");
+            MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=dictionarydb;uid=root;password=hau210701");
             MySqlCommand cmd = dbConn.CreateCommand();
 
             //thiết lập câu lệnh truy vấn từ database 
