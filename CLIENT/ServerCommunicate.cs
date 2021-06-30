@@ -63,6 +63,7 @@ namespace CLIENT
                 recv.IsBackground = true;
                 recv.Start();
                 MessageBox.Show("Connected !");
+                
             }
             catch
             {
@@ -97,7 +98,7 @@ namespace CLIENT
                     plainResult = Encoding.UTF8.GetString(recv);
 
                     //nếu string có chứa not found, hiển thị lên 
-                    if (plainResult.Contains("NOT FOUND"))
+                    if (plainResult == "" )
                     {
                         MessageBox.Show("Not found ! Please try with another word");
                         return;

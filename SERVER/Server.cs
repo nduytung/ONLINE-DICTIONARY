@@ -112,10 +112,10 @@ namespace SERVER
                 }
                 client.Send(outputByte);
             }
-            catch
+            catch (Exception ex)
             {
                 //nếu không nhận được gì => đã đứt kết nối
-                MessageBox.Show("Disconnected");
+                MessageBox.Show(ex.ToString(), "Error");
             }
         }
 
@@ -149,6 +149,7 @@ namespace SERVER
         #endregion
 
         #region BackgroundWorkerHandlers
+
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             //thiết lập connection mới cho mySQL 

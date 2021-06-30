@@ -74,6 +74,7 @@ namespace CLIENT
                 var name = "report.xlsx";
                 var dicrec = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 var fullpath = Path.Combine(dicrec, name);
+
                 Excel excel = new Excel(fullpath, 1);
                 excel.WriteToCell(1, 1, "TỪ VỤNG", "LOẠI TỪ", "NGHĨA CỦA TỪ");
                 excel.WriteToCell(count, 1, tbMessage.Text, server.GetWordType(), server.GetMeaning());
@@ -119,9 +120,6 @@ namespace CLIENT
 
         #endregion
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

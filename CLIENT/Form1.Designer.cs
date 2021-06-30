@@ -331,7 +331,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(460, 20);
             this.label1.TabIndex = 18;
-            this.label1.Text = "[[NT106.L21] - Nhóm 9 - Thanh Hậu, Duy Tùng, Quang Linh, Trọng Nhân ";
+            this.label1.Text = "[[NT106.L21] - Nhóm 8 - Thanh Hậu, Duy Tùng, Quang Linh, Trọng Nhân ";
             // 
             // Form1
             // 
@@ -353,7 +353,6 @@
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(2, 4, 2, 2);
             this.Text = "Client";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
