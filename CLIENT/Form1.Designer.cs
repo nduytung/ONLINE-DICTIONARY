@@ -66,8 +66,8 @@
             button1.Location = new System.Drawing.Point(0, 0);
             button1.Margin = new System.Windows.Forms.Padding(0);
             button1.Name = "button1";
-            button1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            button1.Size = new System.Drawing.Size(200, 125);
+            button1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 12);
+            button1.Size = new System.Drawing.Size(267, 154);
             button1.TabIndex = 3;
             button1.Text = "Online   dictionary";
             button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,10 +78,11 @@
             // 
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.webBrowser1.Location = new System.Drawing.Point(220, 227);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Location = new System.Drawing.Point(293, 279);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(27, 25);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(701, 351);
+            this.webBrowser1.Size = new System.Drawing.Size(935, 432);
             this.webBrowser1.TabIndex = 11;
             // 
             // displayInput
@@ -91,10 +92,11 @@
             this.displayInput.Enabled = false;
             this.displayInput.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayInput.ForeColor = System.Drawing.SystemColors.Window;
-            this.displayInput.Location = new System.Drawing.Point(220, 172);
+            this.displayInput.Location = new System.Drawing.Point(293, 212);
+            this.displayInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.displayInput.Multiline = false;
             this.displayInput.Name = "displayInput";
-            this.displayInput.Size = new System.Drawing.Size(476, 42);
+            this.displayInput.Size = new System.Drawing.Size(635, 52);
             this.displayInput.TabIndex = 12;
             this.displayInput.Text = "";
             // 
@@ -108,10 +110,10 @@
             this.viewTypeBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.viewTypeBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewTypeBtn.Image")));
             this.viewTypeBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewTypeBtn.Location = new System.Drawing.Point(14, 223);
+            this.viewTypeBtn.Location = new System.Drawing.Point(19, 274);
             this.viewTypeBtn.Margin = new System.Windows.Forms.Padding(0);
             this.viewTypeBtn.Name = "viewTypeBtn";
-            this.viewTypeBtn.Size = new System.Drawing.Size(186, 46);
+            this.viewTypeBtn.Size = new System.Drawing.Size(248, 57);
             this.viewTypeBtn.TabIndex = 5;
             this.viewTypeBtn.Text = " View word type";
             this.viewTypeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,10 +130,10 @@
             this.viewMeaningBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.viewMeaningBtn.Image = ((System.Drawing.Image)(resources.GetObject("viewMeaningBtn.Image")));
             this.viewMeaningBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.viewMeaningBtn.Location = new System.Drawing.Point(14, 177);
+            this.viewMeaningBtn.Location = new System.Drawing.Point(19, 218);
             this.viewMeaningBtn.Margin = new System.Windows.Forms.Padding(0);
             this.viewMeaningBtn.Name = "viewMeaningBtn";
-            this.viewMeaningBtn.Size = new System.Drawing.Size(186, 46);
+            this.viewMeaningBtn.Size = new System.Drawing.Size(248, 57);
             this.viewMeaningBtn.TabIndex = 4;
             this.viewMeaningBtn.Text = " View meaning";
             this.viewMeaningBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,9 +148,10 @@
             this.searchedList.Font = new System.Drawing.Font("Segoe UI Semilight", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchedList.ForeColor = System.Drawing.SystemColors.Control;
             this.searchedList.HideSelection = false;
-            this.searchedList.Location = new System.Drawing.Point(14, 364);
+            this.searchedList.Location = new System.Drawing.Point(19, 448);
+            this.searchedList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchedList.Name = "searchedList";
-            this.searchedList.Size = new System.Drawing.Size(171, 227);
+            this.searchedList.Size = new System.Drawing.Size(227, 279);
             this.searchedList.TabIndex = 3;
             this.searchedList.UseCompatibleStateImageBehavior = false;
             this.searchedList.View = System.Windows.Forms.View.List;
@@ -160,9 +163,10 @@
             this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.GhostWhite;
-            this.searchBtn.Location = new System.Drawing.Point(512, 15);
+            this.searchBtn.Location = new System.Drawing.Point(683, 18);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(84, 38);
+            this.searchBtn.Size = new System.Drawing.Size(112, 47);
             this.searchBtn.TabIndex = 13;
             this.searchBtn.Text = "SEARCH";
             this.searchBtn.UseVisualStyleBackColor = false;
@@ -180,9 +184,10 @@
             this.panel1.Controls.Add(this.searchedList);
             this.panel1.Controls.Add(this.viewTypeBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(2, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 603);
+            this.panel1.Size = new System.Drawing.Size(267, 743);
             this.panel1.TabIndex = 14;
             // 
             // connectBtn
@@ -192,9 +197,10 @@
             this.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.connectBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.connectBtn.Location = new System.Drawing.Point(157, 134);
+            this.connectBtn.Location = new System.Drawing.Point(209, 165);
+            this.connectBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.connectBtn.Name = "connectBtn";
-            this.connectBtn.Size = new System.Drawing.Size(40, 35);
+            this.connectBtn.Size = new System.Drawing.Size(53, 43);
             this.connectBtn.TabIndex = 17;
             this.connectBtn.Text = "OK";
             this.connectBtn.UseVisualStyleBackColor = false;
@@ -210,10 +216,10 @@
             this.wordListTitle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.wordListTitle.Image = ((System.Drawing.Image)(resources.GetObject("wordListTitle.Image")));
             this.wordListTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.wordListTitle.Location = new System.Drawing.Point(14, 315);
+            this.wordListTitle.Location = new System.Drawing.Point(19, 388);
             this.wordListTitle.Margin = new System.Windows.Forms.Padding(0);
             this.wordListTitle.Name = "wordListTitle";
-            this.wordListTitle.Size = new System.Drawing.Size(186, 46);
+            this.wordListTitle.Size = new System.Drawing.Size(248, 57);
             this.wordListTitle.TabIndex = 7;
             this.wordListTitle.Text = " Searched list";
             this.wordListTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,10 +232,11 @@
             this.serverIP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.serverIP.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serverIP.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.serverIP.Location = new System.Drawing.Point(14, 136);
+            this.serverIP.Location = new System.Drawing.Point(19, 167);
+            this.serverIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.serverIP.Multiline = true;
             this.serverIP.Name = "serverIP";
-            this.serverIP.Size = new System.Drawing.Size(137, 30);
+            this.serverIP.Size = new System.Drawing.Size(182, 36);
             this.serverIP.TabIndex = 16;
             this.serverIP.Text = "Server IP";
             // 
@@ -243,10 +250,10 @@
             this.exportExcelBtn.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.exportExcelBtn.Image = ((System.Drawing.Image)(resources.GetObject("exportExcelBtn.Image")));
             this.exportExcelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.exportExcelBtn.Location = new System.Drawing.Point(14, 269);
+            this.exportExcelBtn.Location = new System.Drawing.Point(19, 331);
             this.exportExcelBtn.Margin = new System.Windows.Forms.Padding(0);
             this.exportExcelBtn.Name = "exportExcelBtn";
-            this.exportExcelBtn.Size = new System.Drawing.Size(186, 46);
+            this.exportExcelBtn.Size = new System.Drawing.Size(248, 57);
             this.exportExcelBtn.TabIndex = 6;
             this.exportExcelBtn.Text = " Export to Excel";
             this.exportExcelBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -261,9 +268,10 @@
             this.panel2.Controls.Add(this.stopBtn);
             this.panel2.Controls.Add(this.searchBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(202, 4);
+            this.panel2.Location = new System.Drawing.Point(270, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(728, 72);
+            this.panel2.Size = new System.Drawing.Size(970, 89);
             this.panel2.TabIndex = 15;
             // 
             // tbMessage
@@ -274,10 +282,11 @@
             this.tbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMessage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMessage.ForeColor = System.Drawing.SystemColors.Window;
-            this.tbMessage.Location = new System.Drawing.Point(237, 15);
+            this.tbMessage.Location = new System.Drawing.Point(316, 18);
+            this.tbMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMessage.Multiline = false;
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(257, 38);
+            this.tbMessage.Size = new System.Drawing.Size(343, 47);
             this.tbMessage.TabIndex = 16;
             this.tbMessage.TabStop = false;
             this.tbMessage.Text = "";
@@ -289,9 +298,10 @@
             this.stopBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stopBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stopBtn.ForeColor = System.Drawing.Color.DimGray;
-            this.stopBtn.Location = new System.Drawing.Point(611, 15);
+            this.stopBtn.Location = new System.Drawing.Point(815, 18);
+            this.stopBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stopBtn.Name = "stopBtn";
-            this.stopBtn.Size = new System.Drawing.Size(84, 38);
+            this.stopBtn.Size = new System.Drawing.Size(112, 47);
             this.stopBtn.TabIndex = 15;
             this.stopBtn.Text = "STOP";
             this.stopBtn.UseVisualStyleBackColor = false;
@@ -302,9 +312,10 @@
             this.wordDetail.AutoSize = true;
             this.wordDetail.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wordDetail.ForeColor = System.Drawing.Color.White;
-            this.wordDetail.Location = new System.Drawing.Point(211, 119);
+            this.wordDetail.Location = new System.Drawing.Point(281, 146);
+            this.wordDetail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.wordDetail.Name = "wordDetail";
-            this.wordDetail.Size = new System.Drawing.Size(230, 50);
+            this.wordDetail.Size = new System.Drawing.Size(289, 62);
             this.wordDetail.TabIndex = 15;
             this.wordDetail.Text = "Word details";
             // 
@@ -315,9 +326,10 @@
             this.languageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.languageBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.languageBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.languageBtn.Location = new System.Drawing.Point(868, 82);
+            this.languageBtn.Location = new System.Drawing.Point(1157, 101);
+            this.languageBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.languageBtn.Name = "languageBtn";
-            this.languageBtn.Size = new System.Drawing.Size(53, 35);
+            this.languageBtn.Size = new System.Drawing.Size(71, 43);
             this.languageBtn.TabIndex = 17;
             this.languageBtn.Text = "Vie";
             this.languageBtn.UseVisualStyleBackColor = false;
@@ -328,19 +340,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(216, 587);
+            this.label1.Location = new System.Drawing.Point(288, 722);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 20);
+            this.label1.Size = new System.Drawing.Size(585, 25);
             this.label1.TabIndex = 18;
             this.label1.Text = "[[NT106.L21] - Nhóm 9 - Thanh Hậu, Duy Tùng, Quang Linh, Trọng Nhân ";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(932, 609);
+            this.ClientSize = new System.Drawing.Size(1243, 750);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.languageBtn);
             this.Controls.Add(this.wordDetail);
@@ -351,8 +364,9 @@
             this.ForeColor = System.Drawing.Color.White;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(2, 4, 2, 2);
+            this.Padding = new System.Windows.Forms.Padding(3, 5, 3, 2);
             this.Text = "Client";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
