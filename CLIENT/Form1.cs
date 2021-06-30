@@ -93,24 +93,24 @@ namespace CLIENT
         {
             if (language == "Eng")
             {
-                searchBtn.Text = "Tìm";
-                stopBtn.Text = "Dừng";
-                viewMeaningBtn.Text = "  Xem nghĩa từ";
-                viewTypeBtn.Text = "  Xem loại từ";
-                exportExcelBtn.Text = "  Xuất file Excel";
-                wordListTitle.Text = "  Danh sách từ";
-                wordDetail.Text = "  Chi tiết từ";
+                searchBtn.Text = "TÌM";
+                stopBtn.Text = "DỪNG";
+                viewMeaningBtn.Text = " Xem nghĩa từ";
+                viewTypeBtn.Text = " Xem loại từ";
+                exportExcelBtn.Text = " Xuất file Excel";
+                wordListTitle.Text = " Danh sách từ";
+                wordDetail.Text = "Chi tiết từ";
                 languageBtn.Text = "Vie";
                 language = "Vie";
             } else if (language == "Vie")
             {
-                searchBtn.Text = "Search";
-                stopBtn.Text = "Stop";
-                viewMeaningBtn.Text = "  View meaning";
-                viewTypeBtn.Text = "  View word type";
-                exportExcelBtn.Text = "  Export to Excel";
-                wordListTitle.Text = "  Searched list";
-                wordDetail.Text = "  Word details";
+                searchBtn.Text = "SEARCH";
+                stopBtn.Text = "STOP";
+                viewMeaningBtn.Text = " View meaning";
+                viewTypeBtn.Text = " View word type";
+                exportExcelBtn.Text = " Export to Excel";
+                wordListTitle.Text = " Searched list";
+                wordDetail.Text = "Word details";
                 languageBtn.Text = "Eng";
                 language = "Eng";
             }

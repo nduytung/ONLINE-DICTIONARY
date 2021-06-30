@@ -118,7 +118,7 @@ namespace CLIENT
         {
             tcpclient.GetStream().Close();
             tcpclient.Close();
-        }
+        }  
 
         #endregion
 
