@@ -90,7 +90,7 @@
             this.displayInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.displayInput.Enabled = false;
             this.displayInput.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayInput.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.displayInput.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.displayInput.Location = new System.Drawing.Point(220, 172);
             this.displayInput.Multiline = false;
             this.displayInput.Name = "displayInput";
@@ -273,7 +273,6 @@
             this.tbMessage.BackColor = System.Drawing.Color.White;
             this.tbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMessage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMessage.ForeColor = System.Drawing.SystemColors.GrayText;
             this.tbMessage.Location = new System.Drawing.Point(237, 15);
             this.tbMessage.Multiline = false;
             this.tbMessage.Name = "tbMessage";
@@ -348,7 +347,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.displayInput);
             this.Controls.Add(this.webBrowser1);
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
