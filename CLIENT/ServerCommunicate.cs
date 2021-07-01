@@ -78,6 +78,7 @@ namespace CLIENT
 
         public void Send(ListView searchedList, string message)
         {
+            plainResult = "";
             //gửi đata đi 
             byte[] data = Encoding.UTF8.GetBytes(message);
             stream.Write(data, 0, data.Length);
