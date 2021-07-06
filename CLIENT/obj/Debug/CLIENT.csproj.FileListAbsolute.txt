@@ -42,3 +42,4 @@ D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cach
 D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
 D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.exe
 D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.pdb
+D:\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.Modify_Meaning.resources

@@ -131,13 +131,31 @@ namespace SERVER
                     Socket client = obj as Socket;
                     byte[] clientMsg = new byte[1024];
                     client.Receive(clientMsg);
-
+                    int act;
                     //mã hóa nó thành chuỗi
                     input = Encoding.UTF8.GetString(clientMsg);
 
-                    //hiển thị vào danh sách đã nhận và màn hình trạng thái 
-                    textBox1.Text = input;
-                    backgroundWorker1.RunWorkerAsync();
+                    if (input.Contains("<br />"))
+                        act = 2;
+                    else
+                        act = 1;
+
+                    if (act==1)
+                    {
+                        //hiển thị vào danh sách đã nhận và màn hình trạng thái 
+                        textBox1.Text = input;
+                        backgroundWorker1.RunWorkerAsync();
+                    }
+                    else
+                    {
+                        string[] temp = input.Split('%');
+                        textBox1.Text = temp[0];
+                        richTextBox1.Text = temp[1];
+                        output = temp[1];
+                        backgroundWorker2.RunWorkerAsync();
+                    }
+
+                    
                 }
             }
             catch
@@ -218,7 +236,7 @@ namespace SERVER
 
 
 
-        #region backgroundWorker2_Handler
+        #region backgroundWorker2_Handlers
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
             output = richTextBox1.Text;
