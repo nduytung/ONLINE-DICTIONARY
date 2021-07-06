@@ -47,6 +47,7 @@
             this.wordDetail = new System.Windows.Forms.Label();
             this.languageBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.modifyBtn = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -333,6 +334,18 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "[[NT106.L21] - Nhóm 8 - Thanh Hậu, Duy Tùng, Quang Linh, Trọng Nhân ";
             // 
+            // modifyBtn
+            // 
+            this.modifyBtn.BackColor = System.Drawing.Color.SpringGreen;
+            this.modifyBtn.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.modifyBtn.Location = new System.Drawing.Point(774, 172);
+            this.modifyBtn.Name = "modifyBtn";
+            this.modifyBtn.Size = new System.Drawing.Size(123, 42);
+            this.modifyBtn.TabIndex = 20;
+            this.modifyBtn.Text = "MODIFY";
+            this.modifyBtn.UseVisualStyleBackColor = false;
+            this.modifyBtn.Click += new System.EventHandler(this.modifyBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,6 +353,7 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(932, 609);
+            this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.languageBtn);
             this.Controls.Add(this.wordDetail);
@@ -379,6 +393,7 @@
         private System.Windows.Forms.Button connectBtn;
         private System.Windows.Forms.Button languageBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button modifyBtn;
     }
 }
 

@@ -168,5 +168,53 @@ namespace CLIENT
             return type;
         }
         #endregion
+
+        #region ModifyFunction
+        public void Connect_to_Modify(string serverIP)
+        {
+            //thiết lập IP mới và các thông số đầu vào cần thiết
+            IPEndPoint ipe;
+
+            try
+            {
+                //thực hiện kết nối
+                tcpclient = new TcpClient();
+                try
+                {
+
+                    ipe = new IPEndPoint(IPAddress.Parse(serverIP), 9999);
+                    tcpclient.Connect(ipe);
+                }
+                catch
+                {
+                    MessageBox.Show("Your IP address is probably wrong, please check it out ");
+                    return;
+                }
+                stream = tcpclient.GetStream();
+
+                //nếu server trả về true thì apply, báo ra cho người dùng biết
+                Thread recv = new Thread(Receive);
+                recv.IsBackground = true;
+                recv.Start();
+                MessageBox.Show("Applied!");
+
+            }
+            catch
+            {
+                //nếu có bất kỳ lỗi nào, báo ra rằng không thể kết nối
+                MessageBox.Show("The server refused to connect, please try again later");
+                return;
+            }
+        }
+
+        public void Send_To_Modify(string word, string meaning)
+        {
+            //gửi đata đi 
+            byte[] data = Encoding.UTF8.GetBytes(word + '%' + meaning);
+            stream.Write(data, 0, data.Length);
+        }
+
+       
+        #endregion
     }
 }

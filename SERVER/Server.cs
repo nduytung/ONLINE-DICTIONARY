@@ -24,6 +24,8 @@ namespace SERVER
         TcpListener tcplistener;
         string input;
         string output = "";
+        string olddb;
+        string newdb;
         string dbName;
         string dbUID;
         string dbPassword;
@@ -148,7 +150,7 @@ namespace SERVER
         }
         #endregion
 
-        #region BackgroundWorkerHandlers
+        #region BackgroundWorker1_Handlers
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -202,13 +204,68 @@ namespace SERVER
 
         }
 
-
         //hiển thị khi có thay đổi trong backgroundworker
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             return;
         }
+
         #endregion
 
+
+
+
+
+
+
+        #region backgroundWorker2_Handler
+        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
+            output = richTextBox1.Text;
+            //thiết lập connection mới cho mySQL 
+            MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=" + dbName + ";uid=" + dbUID + ";password=" + dbPassword);
+            MySqlCommand cmd = dbConn.CreateCommand();
+
+            //thiết lập câu lệnh truy vấn từ database 
+            cmd.CommandText = "SELECT * from tbl_edict WHERE word='" + textBox1.Text + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT REPLACE(" + olddb + "," + olddb + "," + newdb + ")";
+            cmd.CommandType = CommandType.Text;
+
+            // thử mở database 
+            try
+            {
+                dbConn.Open();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Cannot open database. Error: " + err);
+                this.Close();
+            }
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+
+            // đóng database
+            dbConn.Close();
+        }
+
+        private void backgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (output != "")
+            {
+                Send(client);
+                return;
+            }
+            richTextBox1.Text = "\n NOT FOUND !";
+            Send(client);
+            return;
+        }
+
+        private void backgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            return;
+        }
+        #endregion
     }
 }

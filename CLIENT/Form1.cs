@@ -117,9 +117,23 @@ namespace CLIENT
             }
         }
 
+        private void modifyBtn_Click(object sender, EventArgs e)
+        {
+            if (webBrowser1.DocumentText != "")
+                Modify(tbMessage.Text, serverIP.Text, webBrowser1.DocumentText);
+            else
+                MessageBox.Show("Not find the word need to modify the meaning");
+            return;
+        }
 
         #endregion
 
-       
+        public void Modify(string word, string serverIP, string meaning)
+        {
+            Modify_Meaning md = new Modify_Meaning(word, serverIP, meaning);
+            md.Show();
+        }
+
+
     }
 }
