@@ -27,6 +27,7 @@ namespace CLIENT
         string type;
         WebBrowser browser;
         int count;
+        DialogResult newOne;
         #endregion
 
         #region ConnectToServer
@@ -87,6 +88,7 @@ namespace CLIENT
             searchedList.Items.Add("- " + message);
         }
 
+      
         public void Receive()
         {
             try
@@ -154,6 +156,7 @@ namespace CLIENT
 
             //hiển thị toàn bộ data ra browser 
             browser.DocumentText = plainResult;
+            if (plainResult.Contains("NOT FOUND")) AddNewWord(plainResult);
         }
         #endregion
 
@@ -221,6 +224,34 @@ namespace CLIENT
         }
 
 
+        #endregion
+
+        #region NewWordSub
+        //gởi newWord Submittion
+        public void SendSub(string message)
+        {
+            byte[] data = Encoding.UTF8.GetBytes(message);
+            stream.Write(data, 0, data.Length);
+        }
+
+        //thông báo thêm từ mới
+        public void AddNewWord(string newWord)
+        {
+            newOne = MessageBox.Show("If you want to add new word click 'add new word' ", "New Word !!!", MessageBoxButtons.OK);
+
+        }
+
+        //lấy giá trị dialog trả về cho 'add newWord' button
+        public DialogResult GetDialogResult()
+        {
+            return newOne;
+        }
+
+        //reset lại giá trị dialog cho 'add newWord' button
+        public DialogResult resetDialogResult()
+        {
+            return newOne = DialogResult.None;
+        }
         #endregion
     }
 }
