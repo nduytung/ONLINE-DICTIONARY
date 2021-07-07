@@ -227,7 +227,6 @@ namespace SERVER
         public void HandlingNewWordString_from_Client(string inp)
         {
             LioNewWord.Add(inp);
-            MessageBox.Show(inp);
         }
     }
 }
