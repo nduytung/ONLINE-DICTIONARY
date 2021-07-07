@@ -127,7 +127,7 @@ namespace CLIENT
         private void modifyBtn_Click(object sender, EventArgs e)
         {
             if (webBrowser1.DocumentText != "")
-                server.Modify(tbMessage.Text, serverIP.Text, webBrowser1.DocumentText);
+                Modify(tbMessage.Text, serverIP.Text, webBrowser1.DocumentText);
             else
                 MessageBox.Show("Not find the word need to modify the meaning");
             return;
@@ -136,8 +136,16 @@ namespace CLIENT
 
         #endregion
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
        
+=======
+        public void Modify(string word, string serverIP, string meaning)
+        {
+            Modify_Meaning md = new Modify_Meaning(word, serverIP, meaning);
+            md.Show();
+        }
+>>>>>>> parent of 2e4b22b (fix)
 
 =======
         //Tạo nên form thêm từ mới

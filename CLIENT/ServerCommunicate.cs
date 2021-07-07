@@ -239,13 +239,7 @@ namespace CLIENT
             stream.Write(data, 0, data.Length);
         }
 
-        public void Modify(string word, string serverIP, string meaning)
-        {
-            Modify_Meaning md = new Modify_Meaning(word, serverIP, meaning);
-            md.Show();
-        }
-
-
+       
         #endregion
     }
 }
