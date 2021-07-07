@@ -239,7 +239,6 @@ namespace SERVER
         #region backgroundWorker2_Handlers
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
         {
-            output = richTextBox1.Text;
             //thiết lập connection mới cho mySQL 
             MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=" + dbName + ";uid=" + dbUID + ";password=" + dbPassword);
             MySqlCommand cmd = dbConn.CreateCommand();
