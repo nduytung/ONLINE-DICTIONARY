@@ -41,7 +41,11 @@
             this.password = new System.Windows.Forms.TextBox();
             this.UID = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
+<<<<<<< Updated upstream
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+=======
+            this.button2 = new System.Windows.Forms.Button();
+>>>>>>> Stashed changes
             this.SuspendLayout();
             // 
             // richTextBox1
@@ -80,10 +84,10 @@
             this.connectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.connectBtn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectBtn.ForeColor = System.Drawing.Color.White;
-            this.connectBtn.Location = new System.Drawing.Point(8, 373);
+            this.connectBtn.Location = new System.Drawing.Point(9, 362);
             this.connectBtn.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.connectBtn.Name = "connectBtn";
-            this.connectBtn.Size = new System.Drawing.Size(223, 38);
+            this.connectBtn.Size = new System.Drawing.Size(223, 48);
             this.connectBtn.TabIndex = 3;
             this.connectBtn.Text = "Connect";
             this.connectBtn.UseVisualStyleBackColor = false;
@@ -182,9 +186,21 @@
             this.name.Size = new System.Drawing.Size(223, 26);
             this.name.TabIndex = 15;
             // 
+<<<<<<< Updated upstream
             // backgroundWorker2
             // 
             this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
+=======
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(240, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(224, 33);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "New Word Submit";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+>>>>>>> Stashed changes
             // 
             // Server
             // 
@@ -192,6 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(767, 428);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.name);
             this.Controls.Add(this.UID);
             this.Controls.Add(this.password);
@@ -227,7 +244,11 @@
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.TextBox UID;
         private System.Windows.Forms.TextBox name;
+<<<<<<< Updated upstream
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+=======
+        private System.Windows.Forms.Button button2;
+>>>>>>> Stashed changes
     }
 }
 

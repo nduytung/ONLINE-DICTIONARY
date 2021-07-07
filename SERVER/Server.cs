@@ -29,8 +29,9 @@ namespace SERVER
         string dbName;
         string dbUID;
         string dbPassword;
+        List<string> LioNewWord = new List<string>();
         #endregion
-
+        
         #region Initialize
         public Server()
         {
@@ -40,7 +41,7 @@ namespace SERVER
             Control.CheckForIllegalCrossThreadCalls = false;
         }
         #endregion
-
+        
         #region ButtonEventHandlers
         private void connectBtn_Click(object sender, EventArgs e)
         {
@@ -48,8 +49,16 @@ namespace SERVER
             connectBtn.Enabled = false;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (var form = new NewWordList(dbName, dbUID, dbPassword, LioNewWord))
+            {
+                var result = form.ShowDialog();
+                LioNewWord = form.getList();
+            }
+        }
         #endregion
-
+        
         #region ClientContact
         //hàm thực hiện kết nối 
         void Connect()
@@ -106,7 +115,7 @@ namespace SERVER
                 {
                     outputByte = Encoding.UTF8.GetBytes(output);
                     //làm trống output, sẵn sàng nhận dữ liệu tiếp theo từ user 
-                    output = null;
+                    output = "";
                 }
                 else
                 {
@@ -135,6 +144,7 @@ namespace SERVER
                     //mã hóa nó thành chuỗi
                     input = Encoding.UTF8.GetString(clientMsg);
 
+<<<<<<< Updated upstream
                     if (input.Contains("<br />"))
                         act = 2;
                     else
@@ -156,6 +166,16 @@ namespace SERVER
                     }
 
                     
+=======
+                    //hiển thị vào danh sách đã nhận và màn hình trạng thái 
+                    textBox1.Text = input;
+                    if (input.Contains("@%$"))
+                    {
+                        HandlingNewWordString_from_Client(input);
+                    }
+                    else          
+                    backgroundWorker1.RunWorkerAsync();
+>>>>>>> Stashed changes
                 }
             }
             catch
@@ -200,7 +220,6 @@ namespace SERVER
                 break;
             }
 
-
             //đóng database 
             dbConn.Close();
 
@@ -230,6 +249,7 @@ namespace SERVER
 
         #endregion
 
+<<<<<<< Updated upstream
 
 
 
@@ -284,5 +304,13 @@ namespace SERVER
             return;
         }
         #endregion
+=======
+        // Thêm NewWord nhận được từ Client as Chuỗi ký tự
+        public void HandlingNewWordString_from_Client(string inp)
+        {
+            LioNewWord.Add(inp);
+            MessageBox.Show(inp);
+        }
+>>>>>>> Stashed changes
     }
 }
