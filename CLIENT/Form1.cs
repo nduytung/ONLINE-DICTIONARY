@@ -25,12 +25,15 @@ namespace CLIENT
         string Word;
         string Type;
         string Meaning;
-        #endregion
+
+        #endregion l
 
         #region Initialize 
         public Form1()
         {
             InitializeComponent();
+            backgroundWorker1.WorkerReportsProgress = true;
+            backgroundWorker1.WorkerSupportsCancellation = true;
             Control.CheckForIllegalCrossThreadCalls = false;
         }
         #endregion
@@ -86,7 +89,7 @@ namespace CLIENT
                 excel.Close();
                 MessageBox.Show("Write successfully !");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Make sure the file 'report' exists!");
             }
@@ -106,7 +109,8 @@ namespace CLIENT
                 wordDetail.Text = "Chi tiết từ";
                 languageBtn.Text = "Vie";
                 language = "Vie";
-            } else if (language == "Vie")
+            }
+            else if (language == "Vie")
             {
                 searchBtn.Text = "SEARCH";
                 stopBtn.Text = "STOP";
@@ -120,13 +124,9 @@ namespace CLIENT
             }
         }
 
-        private void modifyBtn_Click(object sender, EventArgs e)
-        {
-            if (webBrowser1.DocumentText != "")
-                server.Modify(tbMessage.Text, serverIP.Text, webBrowser1.DocumentText);
-            else
-                MessageBox.Show("Not find the word need to modify the meaning");
-        }
+
+
+        #endregion
 
         //Tạo nên form thêm từ mới
         public void button2_Click(object sender, EventArgs e)
@@ -153,9 +153,7 @@ namespace CLIENT
                 server.resetDialogResult();
             }
         }
-
-        #endregion
-
+        
 
     }
 }

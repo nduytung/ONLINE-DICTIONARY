@@ -24,13 +24,12 @@ namespace SERVER
         TcpListener tcplistener;
         string input;
         string output = "";
-        string olddb;
-        string newdb;
         string dbName;
         string dbUID;
         string dbPassword;
+        List<string> LioNewWord = new List<string>();
         #endregion
-
+        
         #region Initialize
         public Server()
         {
@@ -40,7 +39,7 @@ namespace SERVER
             Control.CheckForIllegalCrossThreadCalls = false;
         }
         #endregion
-
+        
         #region ButtonEventHandlers
         private void connectBtn_Click(object sender, EventArgs e)
         {
@@ -48,8 +47,16 @@ namespace SERVER
             connectBtn.Enabled = false;
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (var form = new NewWordList(dbName, dbUID, dbPassword, LioNewWord))
+            {
+                var result = form.ShowDialog();
+                LioNewWord = form.getList();
+            }
+        }
         #endregion
-
+        
         #region ClientContact
         //hàm thực hiện kết nối 
         void Connect()
@@ -106,7 +113,7 @@ namespace SERVER
                 {
                     outputByte = Encoding.UTF8.GetBytes(output);
                     //làm trống output, sẵn sàng nhận dữ liệu tiếp theo từ user 
-                    output = null;
+                    output = "";
                 }
                 else
                 {
@@ -131,28 +138,18 @@ namespace SERVER
                     Socket client = obj as Socket;
                     byte[] clientMsg = new byte[1024];
                     client.Receive(clientMsg);
-                    int act;
+
                     //mã hóa nó thành chuỗi
                     input = Encoding.UTF8.GetString(clientMsg);
 
-                    if (input.Contains("<br />"))
-                        act = 2;
-                    else
-                        act = 1;
-
-                    if (act==1)
+                    //hiển thị vào danh sách đã nhận và màn hình trạng thái 
+                    textBox1.Text = input;
+                    if (input.Contains("@%$"))
                     {
-                        
-                        //hiển thị vào danh sách đã nhận và màn hình trạng thái                        
-                        textBox1.Text = input;
-                        backgroundWorker1.RunWorkerAsync();
+                        HandlingNewWordString_from_Client(input);
                     }
-                    else
-                    {
-                        richTextBox1.Text = input;
-                        newdb = input;
-                        backgroundWorker2.RunWorkerAsync();
-                    }                    
+                    else          
+                    backgroundWorker1.RunWorkerAsync();
                 }
             }
             catch
@@ -160,10 +157,12 @@ namespace SERVER
                 MessageBox.Show("Client has been disconnected, please try again");
             }
 
+
+
         }
         #endregion
 
-        #region BackgroundWorker1_Handlers
+        #region BackgroundWorkerHandlers
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -195,7 +194,6 @@ namespace SERVER
                 break;
             }
 
-
             //đóng database 
             dbConn.Close();
 
@@ -207,7 +205,7 @@ namespace SERVER
             //gửi đi cho client 
             if (output != "")
             {
-                olddb = output;
+
                 richTextBox1.Text = "\n STATUS: DONE \n" + output;
                 Send(client);
                 return;
@@ -217,58 +215,19 @@ namespace SERVER
 
         }
 
+
         //hiển thị khi có thay đổi trong backgroundworker
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             return;
         }
-
         #endregion
 
-        #region backgroundWorker2_Handlers
-        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {           
-            //thiết lập connection mới cho mySQL 
-            MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=" + dbName + ";uid=" + dbUID + ";password=" + dbPassword);
-            MySqlCommand cmd = dbConn.CreateCommand();
-
-            
-            cmd.CommandText = "update tbl_edict set detail='" + richTextBox1.Text + "' where word='"+ textBox1.Text +"';";
-            cmd.CommandType = CommandType.Text;
-
-            // thử mở database 
-            try
-            {
-                dbConn.Open();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("Cannot open database. Error: " + err);
-                this.Close();
-            }
-
-            MySqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-
-            }
-
-            // đóng database
-            dbConn.Close();
-
-
-        }
-
-        private void backgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        // Thêm NewWord nhận được từ Client as Chuỗi ký tự
+        public void HandlingNewWordString_from_Client(string inp)
         {
-            MessageBox.Show("Data Updated");
-            return;
+            LioNewWord.Add(inp);
+            MessageBox.Show(inp);
         }
-
-        private void backgroundWorker2_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            return;
-        }
-        #endregion
     }
 }

@@ -42,20 +42,6 @@ D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cach
 D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
 D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.exe
 D:\github\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.pdb
-D:\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.Modify_Meaning.resources
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\bin\Debug\CLIENT.exe.config
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\bin\Debug\CLIENT.exe
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\bin\Debug\CLIENT.pdb
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.csprojAssemblyReference.cache
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\Interop.ACTIVEXLib.dll
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.csproj.ResolveComReference.cache
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.Form1.resources
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.Modify_Meaning.resources
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.exe
-C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\CLIENT\obj\Debug\CLIENT.pdb
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\bin\Debug\CLIENT.exe.config
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\bin\Debug\CLIENT.exe
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\bin\Debug\CLIENT.pdb
@@ -63,10 +49,22 @@ E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.AssemblyReferen
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\Interop.ACTIVEXLib.dll
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.ResolveComReference.cache
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.Form1.resources
-E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.Modify_Meaning.resources
-E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.NewWordSub.resources
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.exe
 E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.pdb
+E:\GitHub Clone\ONLINE-DICTIONARY\CLIENT\obj\Debug\CLIENT.NewWordSub.resources
+C:\Users\Nhan\Desktop\CLIENT\bin\Debug\CLIENT.exe.config
+C:\Users\Nhan\Desktop\CLIENT\bin\Debug\CLIENT.exe
+C:\Users\Nhan\Desktop\CLIENT\bin\Debug\CLIENT.pdb
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.csproj.AssemblyReference.cache
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\Interop.ACTIVEXLib.dll
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.csproj.ResolveComReference.cache
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.Form1.resources
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.NewWordSub.resources
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.Properties.Resources.resources
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.csproj.GenerateResource.cache
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.csproj.CoreCompileInputs.cache
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.exe
+C:\Users\Nhan\Desktop\CLIENT\obj\Debug\CLIENT.pdb

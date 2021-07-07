@@ -88,7 +88,11 @@ namespace CLIENT
             searchedList.Items.Add("- " + message);
         }
 
-      
+        public void SendSub(string message)
+        {
+            byte[] data = Encoding.UTF8.GetBytes(message);
+            stream.Write(data, 0, data.Length);
+        }
         public void Receive()
         {
             try
@@ -98,8 +102,8 @@ namespace CLIENT
                     //nhận dữ liệu thô từ server
                     byte[] recv = new byte[1024];
                     stream.Read(recv, 0, recv.Length);
-                    plainResult = Encoding.UTF8.GetString(recv);
-
+                    plainResult = UTF32Encoding.UTF8.GetString(recv);
+                    
                     //nếu string có chứa not found, hiển thị lên 
                     if (plainResult == "" )
                     {
@@ -122,7 +126,7 @@ namespace CLIENT
         {
             tcpclient.GetStream().Close();
             tcpclient.Close();
-        }  
+        }
 
         #endregion
 
@@ -157,7 +161,16 @@ namespace CLIENT
             //hiển thị toàn bộ data ra browser 
             browser.DocumentText = plainResult;
             if (plainResult.Contains("NOT FOUND")) AddNewWord(plainResult);
+
         }
+
+        public void AddNewWord(string newWord)
+        {
+            newOne = MessageBox.Show("If you want to add new word click 'add new word' ","New Word !!!",MessageBoxButtons.OK);
+         
+        }
+    
+        
         #endregion
 
         #region GetDataToDisplay
@@ -170,84 +183,11 @@ namespace CLIENT
         {
             return type;
         }
-        #endregion
 
-        #region ModifyFunction
-        public void Connect_to_Modify(string serverIP)
-        {
-            //thiết lập IP mới và các thông số đầu vào cần thiết
-            IPEndPoint ipe;
-
-            try
-            {
-                //thực hiện kết nối
-                tcpclient = new TcpClient();
-                try
-                {
-
-                    ipe = new IPEndPoint(IPAddress.Parse(serverIP), 9999);
-                    tcpclient.Connect(ipe);
-                }
-                catch
-                {
-                    MessageBox.Show("Your IP address is probably wrong, please check it out ");
-                    return;
-                }
-                stream = tcpclient.GetStream();
-
-                //nếu server trả về true thì apply, báo ra cho người dùng biết
-                Thread recv = new Thread(Receive);
-                recv.IsBackground = true;
-                recv.Start();
-                MessageBox.Show("Applied!");
-
-            }
-            catch
-            {
-                //nếu có bất kỳ lỗi nào, báo ra rằng không thể kết nối
-                MessageBox.Show("The server refused to connect, please try again later");
-                return;
-            }
-        }
-
-        public void Send_To_Modify(string word, string meaning)
-        {
-            //gửi đata đi 
-            byte[] data = Encoding.UTF8.GetBytes(meaning);
-            stream.Write(data, 0, data.Length);
-        }
-
-        public void Modify(string word, string serverIP, string meaning)
-        {
-            Modify_Meaning md = new Modify_Meaning(word, serverIP, meaning);
-            md.Show();
-        }
-
-
-        #endregion
-
-        #region NewWordSub
-        //gởi newWord Submittion
-        public void SendSub(string message)
-        {
-            byte[] data = Encoding.UTF8.GetBytes(message);
-            stream.Write(data, 0, data.Length);
-        }
-
-        //thông báo thêm từ mới
-        public void AddNewWord(string newWord)
-        {
-            newOne = MessageBox.Show("If you want to add new word click 'add new word' ", "New Word !!!", MessageBoxButtons.OK);
-
-        }
-
-        //lấy giá trị dialog trả về cho 'add newWord' button
         public DialogResult GetDialogResult()
         {
             return newOne;
         }
-
-        //reset lại giá trị dialog cho 'add newWord' button
         public DialogResult resetDialogResult()
         {
             return newOne = DialogResult.None;

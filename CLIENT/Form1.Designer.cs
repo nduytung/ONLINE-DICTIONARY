@@ -47,7 +47,7 @@
             this.wordDetail = new System.Windows.Forms.Label();
             this.languageBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.modifyBtn = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button2 = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -81,7 +81,7 @@
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.webBrowser1.Location = new System.Drawing.Point(293, 279);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(27, 25);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.Size = new System.Drawing.Size(935, 432);
@@ -95,7 +95,7 @@
             this.displayInput.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayInput.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.displayInput.Location = new System.Drawing.Point(293, 212);
-            this.displayInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.displayInput.Margin = new System.Windows.Forms.Padding(4);
             this.displayInput.Multiline = false;
             this.displayInput.Name = "displayInput";
             this.displayInput.Size = new System.Drawing.Size(635, 52);
@@ -151,7 +151,7 @@
             this.searchedList.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.searchedList.HideSelection = false;
             this.searchedList.Location = new System.Drawing.Point(19, 448);
-            this.searchedList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchedList.Margin = new System.Windows.Forms.Padding(4);
             this.searchedList.Name = "searchedList";
             this.searchedList.Size = new System.Drawing.Size(227, 279);
             this.searchedList.TabIndex = 3;
@@ -166,7 +166,7 @@
             this.searchBtn.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.GhostWhite;
             this.searchBtn.Location = new System.Drawing.Point(683, 18);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(4);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(112, 47);
             this.searchBtn.TabIndex = 13;
@@ -187,7 +187,7 @@
             this.panel1.Controls.Add(this.viewTypeBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(3, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(267, 743);
             this.panel1.TabIndex = 14;
@@ -200,7 +200,7 @@
             this.connectBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectBtn.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.connectBtn.Location = new System.Drawing.Point(209, 165);
-            this.connectBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.connectBtn.Margin = new System.Windows.Forms.Padding(4);
             this.connectBtn.Name = "connectBtn";
             this.connectBtn.Size = new System.Drawing.Size(53, 43);
             this.connectBtn.TabIndex = 17;
@@ -235,7 +235,7 @@
             this.serverIP.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serverIP.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.serverIP.Location = new System.Drawing.Point(19, 167);
-            this.serverIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.serverIP.Margin = new System.Windows.Forms.Padding(4);
             this.serverIP.Multiline = true;
             this.serverIP.Name = "serverIP";
             this.serverIP.Size = new System.Drawing.Size(182, 36);
@@ -271,7 +271,7 @@
             this.panel2.Controls.Add(this.searchBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(270, 5);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(970, 89);
             this.panel2.TabIndex = 15;
@@ -284,7 +284,7 @@
             this.tbMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbMessage.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMessage.Location = new System.Drawing.Point(316, 18);
-            this.tbMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMessage.Margin = new System.Windows.Forms.Padding(4);
             this.tbMessage.Multiline = false;
             this.tbMessage.Name = "tbMessage";
             this.tbMessage.Size = new System.Drawing.Size(343, 47);
@@ -300,7 +300,7 @@
             this.stopBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stopBtn.ForeColor = System.Drawing.Color.DimGray;
             this.stopBtn.Location = new System.Drawing.Point(815, 18);
-            this.stopBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stopBtn.Margin = new System.Windows.Forms.Padding(4);
             this.stopBtn.Name = "stopBtn";
             this.stopBtn.Size = new System.Drawing.Size(112, 47);
             this.stopBtn.TabIndex = 15;
@@ -328,7 +328,7 @@
             this.languageBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.languageBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.languageBtn.Location = new System.Drawing.Point(1157, 101);
-            this.languageBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.languageBtn.Margin = new System.Windows.Forms.Padding(4);
             this.languageBtn.Name = "languageBtn";
             this.languageBtn.Size = new System.Drawing.Size(71, 43);
             this.languageBtn.TabIndex = 17;
@@ -348,27 +348,15 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "[[NT106.L21] - Nhóm 8 - Thanh Hậu, Duy Tùng, Quang Linh, Trọng Nhân ";
             // 
-            // modifyBtn
-            // 
-            this.modifyBtn.BackColor = System.Drawing.Color.SpringGreen;
-            this.modifyBtn.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.modifyBtn.Location = new System.Drawing.Point(1032, 212);
-            this.modifyBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.modifyBtn.Name = "modifyBtn";
-            this.modifyBtn.Size = new System.Drawing.Size(164, 52);
-            this.modifyBtn.TabIndex = 20;
-            this.modifyBtn.Text = "MODIFY";
-            this.modifyBtn.UseVisualStyleBackColor = false;
-            this.modifyBtn.Click += new System.EventHandler(this.modifyBtn_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1032, 164);
+            this.button2.Location = new System.Drawing.Point(1045, 223);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 41);
-            this.button2.TabIndex = 21;
+            this.button2.Size = new System.Drawing.Size(142, 41);
+            this.button2.TabIndex = 19;
             this.button2.Text = "add new word";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
@@ -378,7 +366,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1243, 750);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.modifyBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.languageBtn);
             this.Controls.Add(this.wordDetail);
@@ -389,7 +376,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(3, 5, 3, 2);
             this.Text = "Client";
@@ -419,7 +406,7 @@
         private System.Windows.Forms.Button connectBtn;
         private System.Windows.Forms.Button languageBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button modifyBtn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button2;
     }
 }

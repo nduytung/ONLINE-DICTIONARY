@@ -25,7 +25,7 @@ namespace CLIENT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (richTextBox2.Text == "" || richTextBox3.Text == "")
+            if (richTextBox2.Text == "" || richTextBox3.Text == "" )
             {
                 MessageBox.Show("Please fill in type and word detail");
                 return;
