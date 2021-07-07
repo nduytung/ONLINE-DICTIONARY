@@ -29,22 +29,19 @@ D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
 D:\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CopyComplete
 D:\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.exe
 D:\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.pdb
-<<<<<<< Updated upstream
 D:\ONLINE-DICTIONARY\SERVER\bin\Debug\MySql.Data.dll
 D:\ONLINE-DICTIONARY\SERVER\bin\Debug\Google.Protobuf.dll
 D:\ONLINE-DICTIONARY\SERVER\bin\Debug\BouncyCastle.Crypto.dll
 D:\ONLINE-DICTIONARY\SERVER\bin\Debug\MySql.Data.xml
-=======
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.exe.config
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.exe
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\bin\Debug\dictTest.pdb
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.AssemblyReference.cache
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.Server.resources
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.Properties.Resources.resources
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.GenerateResource.cache
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.csproj.CopyComplete
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.exe
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\dictTest.pdb
-E:\GitHub Clone\ONLINE-DICTIONARY\SERVER\obj\Debug\SERVER.NewWordList.resources
->>>>>>> Stashed changes
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\bin\Debug\dictTest.exe.config
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\bin\Debug\dictTest.exe
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\bin\Debug\dictTest.pdb
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\bin\Debug\MySql.Data.dll
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\SERVER.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\SERVER.Server.resources
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\dictTest.Properties.Resources.resources
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\SERVER.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\SERVER.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\SERVER.csproj.CopyComplete
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\dictTest.exe
+C:\Users\DELL\Desktop\ONLINE-DICTIONARY_TEST\SERVER\obj\Debug\dictTest.pdb

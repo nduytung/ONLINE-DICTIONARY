@@ -29,9 +29,8 @@ namespace SERVER
         string dbName;
         string dbUID;
         string dbPassword;
-        List<string> LioNewWord = new List<string>();
         #endregion
-        
+
         #region Initialize
         public Server()
         {
@@ -41,7 +40,7 @@ namespace SERVER
             Control.CheckForIllegalCrossThreadCalls = false;
         }
         #endregion
-        
+
         #region ButtonEventHandlers
         private void connectBtn_Click(object sender, EventArgs e)
         {
@@ -49,16 +48,8 @@ namespace SERVER
             connectBtn.Enabled = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            using (var form = new NewWordList(dbName, dbUID, dbPassword, LioNewWord))
-            {
-                var result = form.ShowDialog();
-                LioNewWord = form.getList();
-            }
-        }
         #endregion
-        
+
         #region ClientContact
         //hàm thực hiện kết nối 
         void Connect()
@@ -115,7 +106,7 @@ namespace SERVER
                 {
                     outputByte = Encoding.UTF8.GetBytes(output);
                     //làm trống output, sẵn sàng nhận dữ liệu tiếp theo từ user 
-                    output = "";
+                    output = null;
                 }
                 else
                 {
@@ -144,7 +135,6 @@ namespace SERVER
                     //mã hóa nó thành chuỗi
                     input = Encoding.UTF8.GetString(clientMsg);
 
-<<<<<<< Updated upstream
                     if (input.Contains("<br />"))
                         act = 2;
                     else
@@ -152,38 +142,23 @@ namespace SERVER
 
                     if (act==1)
                     {
-                        //hiển thị vào danh sách đã nhận và màn hình trạng thái 
+                        
+                        //hiển thị vào danh sách đã nhận và màn hình trạng thái                        
                         textBox1.Text = input;
                         backgroundWorker1.RunWorkerAsync();
                     }
                     else
                     {
-                        string[] temp = input.Split('%');
-                        textBox1.Text = temp[0];
-                        richTextBox1.Text = temp[1];
-                        output = temp[1];
+                        richTextBox1.Text = input;
+                        newdb = input;
                         backgroundWorker2.RunWorkerAsync();
-                    }
-
-                    
-=======
-                    //hiển thị vào danh sách đã nhận và màn hình trạng thái 
-                    textBox1.Text = input;
-                    if (input.Contains("@%$"))
-                    {
-                        HandlingNewWordString_from_Client(input);
-                    }
-                    else          
-                    backgroundWorker1.RunWorkerAsync();
->>>>>>> Stashed changes
+                    }                    
                 }
             }
             catch
             {
                 MessageBox.Show("Client has been disconnected, please try again");
             }
-
-
 
         }
         #endregion
@@ -220,6 +195,7 @@ namespace SERVER
                 break;
             }
 
+
             //đóng database 
             dbConn.Close();
 
@@ -231,7 +207,7 @@ namespace SERVER
             //gửi đi cho client 
             if (output != "")
             {
-
+                olddb = output;
                 richTextBox1.Text = "\n STATUS: DONE \n" + output;
                 Send(client);
                 return;
@@ -249,25 +225,15 @@ namespace SERVER
 
         #endregion
 
-<<<<<<< Updated upstream
-
-
-
-
-
-
         #region backgroundWorker2_Handlers
         private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {
-            output = richTextBox1.Text;
+        {           
             //thiết lập connection mới cho mySQL 
             MySql.Data.MySqlClient.MySqlConnection dbConn = new MySql.Data.MySqlClient.MySqlConnection("Persist Security Info=False;server=localhost;database=" + dbName + ";uid=" + dbUID + ";password=" + dbPassword);
             MySqlCommand cmd = dbConn.CreateCommand();
 
-            //thiết lập câu lệnh truy vấn từ database 
-            cmd.CommandText = "SELECT * from tbl_edict WHERE word='" + textBox1.Text + "'";
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT REPLACE(" + olddb + "," + olddb + "," + newdb + ")";
+            
+            cmd.CommandText = "update tbl_edict set detail='" + richTextBox1.Text + "' where word='"+ textBox1.Text +"';";
             cmd.CommandType = CommandType.Text;
 
             // thử mở database 
@@ -282,21 +248,20 @@ namespace SERVER
             }
 
             MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
 
+            }
 
             // đóng database
             dbConn.Close();
+
+
         }
 
         private void backgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (output != "")
-            {
-                Send(client);
-                return;
-            }
-            richTextBox1.Text = "\n NOT FOUND !";
-            Send(client);
+            MessageBox.Show("Data Updated");
             return;
         }
 
@@ -305,13 +270,5 @@ namespace SERVER
             return;
         }
         #endregion
-=======
-        // Thêm NewWord nhận được từ Client as Chuỗi ký tự
-        public void HandlingNewWordString_from_Client(string inp)
-        {
-            LioNewWord.Add(inp);
-            MessageBox.Show(inp);
-        }
->>>>>>> Stashed changes
     }
 }

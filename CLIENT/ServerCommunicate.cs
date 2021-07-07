@@ -27,7 +27,6 @@ namespace CLIENT
         string type;
         WebBrowser browser;
         int count;
-        DialogResult newOne;
         #endregion
 
         #region ConnectToServer
@@ -88,11 +87,6 @@ namespace CLIENT
             searchedList.Items.Add("- " + message);
         }
 
-        public void SendSub(string message)
-        {
-            byte[] data = Encoding.UTF8.GetBytes(message);
-            stream.Write(data, 0, data.Length);
-        }
         public void Receive()
         {
             try
@@ -102,8 +96,8 @@ namespace CLIENT
                     //nhận dữ liệu thô từ server
                     byte[] recv = new byte[1024];
                     stream.Read(recv, 0, recv.Length);
-                    plainResult = UTF32Encoding.UTF8.GetString(recv);
-                    
+                    plainResult = Encoding.UTF8.GetString(recv);
+
                     //nếu string có chứa not found, hiển thị lên 
                     if (plainResult == "" )
                     {
@@ -126,7 +120,7 @@ namespace CLIENT
         {
             tcpclient.GetStream().Close();
             tcpclient.Close();
-        }
+        }  
 
         #endregion
 
@@ -160,17 +154,7 @@ namespace CLIENT
 
             //hiển thị toàn bộ data ra browser 
             browser.DocumentText = plainResult;
-            if (plainResult.Contains("NOT FOUND")) AddNewWord(plainResult);
-
         }
-
-        public void AddNewWord(string newWord)
-        {
-            newOne = MessageBox.Show("If you want to add new word click 'add new word' ","New Word !!!",MessageBoxButtons.OK);
-         
-        }
-    
-        
         #endregion
 
         #region GetDataToDisplay
@@ -182,15 +166,6 @@ namespace CLIENT
         public string GetWordType()
         {
             return type;
-        }
-
-        public DialogResult GetDialogResult()
-        {
-            return newOne;
-        }
-        public DialogResult resetDialogResult()
-        {
-            return newOne = DialogResult.None;
         }
         #endregion
 
@@ -235,11 +210,17 @@ namespace CLIENT
         public void Send_To_Modify(string word, string meaning)
         {
             //gửi đata đi 
-            byte[] data = Encoding.UTF8.GetBytes(word + '%' + meaning);
+            byte[] data = Encoding.UTF8.GetBytes(meaning);
             stream.Write(data, 0, data.Length);
         }
 
-       
+        public void Modify(string word, string serverIP, string meaning)
+        {
+            Modify_Meaning md = new Modify_Meaning(word, serverIP, meaning);
+            md.Show();
+        }
+
+
         #endregion
     }
 }

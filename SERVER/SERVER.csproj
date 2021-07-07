@@ -50,13 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="newWord.cs" />
-    <Compile Include="NewWordList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewWordList.Designer.cs">
-      <DependentUpon>NewWordList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Server.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,9 +58,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="NewWordList.resx">
-      <DependentUpon>NewWordList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Server.resx">
       <DependentUpon>Server.cs</DependentUpon>
     </EmbeddedResource>

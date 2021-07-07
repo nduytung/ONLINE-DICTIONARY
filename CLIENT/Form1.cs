@@ -22,18 +22,12 @@ namespace CLIENT
         int count = 2;
         ServerCommunicate server = new ServerCommunicate();
         string language = "Vie";
-        string Word;
-        string Type;
-        string Meaning;
-
-        #endregion l
+        #endregion
 
         #region Initialize 
         public Form1()
         {
             InitializeComponent();
-            backgroundWorker1.WorkerReportsProgress = true;
-            backgroundWorker1.WorkerSupportsCancellation = true;
             Control.CheckForIllegalCrossThreadCalls = false;
         }
         #endregion
@@ -89,7 +83,7 @@ namespace CLIENT
                 excel.Close();
                 MessageBox.Show("Write successfully !");
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show("Make sure the file 'report' exists!");
             }
@@ -109,8 +103,7 @@ namespace CLIENT
                 wordDetail.Text = "Chi tiết từ";
                 languageBtn.Text = "Vie";
                 language = "Vie";
-            }
-            else if (language == "Vie")
+            } else if (language == "Vie")
             {
                 searchBtn.Text = "SEARCH";
                 stopBtn.Text = "STOP";
@@ -127,54 +120,13 @@ namespace CLIENT
         private void modifyBtn_Click(object sender, EventArgs e)
         {
             if (webBrowser1.DocumentText != "")
-                Modify(tbMessage.Text, serverIP.Text, webBrowser1.DocumentText);
+                server.Modify(tbMessage.Text, serverIP.Text, webBrowser1.DocumentText);
             else
                 MessageBox.Show("Not find the word need to modify the meaning");
-            return;
         }
-
 
         #endregion
-
-<<<<<<< HEAD
-<<<<<<< Updated upstream
        
-=======
-        public void Modify(string word, string serverIP, string meaning)
-        {
-            Modify_Meaning md = new Modify_Meaning(word, serverIP, meaning);
-            md.Show();
-        }
->>>>>>> parent of 2e4b22b (fix)
-
-=======
-        //Tạo nên form thêm từ mới
-        public void button2_Click(object sender, EventArgs e)
-        {
-            if (server.GetDialogResult() == DialogResult.OK)
-            {
-                string sum;
-                using (var form = new NewWordSub(tbMessage.Text))
-                {
-                    var result = form.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        string word = form.word;            //values preserved after close
-                        string type = form.type;
-                        string meaning = form.meaning;
-                        //Do something here with these values
-                        Word = word;
-                        Type = type;
-                        Meaning = meaning;
-                        sum = Word + "@%$" + Type + "@%$" + Meaning;
-                        server.SendSub(sum);
-                    }
-                }
-                server.resetDialogResult();
-            }
-        }
-        
->>>>>>> Stashed changes
 
     }
 }

@@ -54,19 +54,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< Updated upstream
     <Compile Include="Modify_Meaning.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modify_Meaning.Designer.cs">
       <DependentUpon>Modify_Meaning.cs</DependentUpon>
-=======
-    <Compile Include="NewWordSub.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewWordSub.Designer.cs">
-      <DependentUpon>NewWordSub.cs</DependentUpon>
->>>>>>> Stashed changes
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,13 +66,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< Updated upstream
     <EmbeddedResource Include="Modify_Meaning.resx">
       <DependentUpon>Modify_Meaning.cs</DependentUpon>
-=======
-    <EmbeddedResource Include="NewWordSub.resx">
-      <DependentUpon>NewWordSub.cs</DependentUpon>
->>>>>>> Stashed changes
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
