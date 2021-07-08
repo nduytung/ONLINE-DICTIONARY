@@ -124,20 +124,12 @@ namespace CLIENT
             }
         }
 
-        private void modifyBtn_Click(object sender, EventArgs e)
-        {
-            if (webBrowser1.DocumentText != "")
-                server.Modify(tbMessage.Text, serverIP.Text, webBrowser1.DocumentText);
-            else
-                MessageBox.Show("Not find the word need to modify the meaning");
-        }
 
-    
 
-    #endregion
+        #endregion
 
-    //Tạo nên form thêm từ mới
-    public void button2_Click(object sender, EventArgs e)
+        //Tạo nên form thêm từ mới
+        public void button2_Click(object sender, EventArgs e)
         {
             if (server.GetDialogResult() == DialogResult.OK)
             {
@@ -161,7 +153,7 @@ namespace CLIENT
                 server.resetDialogResult();
             }
         }
-
         
+
     }
 }

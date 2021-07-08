@@ -143,21 +143,13 @@ namespace SERVER
                     input = Encoding.UTF8.GetString(clientMsg);
 
                     //hiển thị vào danh sách đã nhận và màn hình trạng thái 
+                    textBox1.Text = input;
                     if (input.Contains("@%$"))
                     {
-                        textBox1.Text = input;
                         HandlingNewWordString_from_Client(input);
                     }
-                    else if (input.Contains("<br />"))
-                    {
-                        HandlingModifyOnDatabase();
-                    }
-                    else
-                    {
-                        backgroundWorker1.RunWorkerAsync();
-                    }
-
-                                                              
+                    else          
+                    backgroundWorker1.RunWorkerAsync();
                 }
             }
             catch
@@ -220,9 +212,10 @@ namespace SERVER
             }
             richTextBox1.Text = "\n NOT FOUND !";
             Send(client);
-            return;
+
         }
-       
+
+
         //hiển thị khi có thay đổi trong backgroundworker
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
@@ -230,21 +223,10 @@ namespace SERVER
         }
         #endregion
 
-        #region HandlingFunction
         // Thêm NewWord nhận được từ Client as Chuỗi ký tự
         public void HandlingNewWordString_from_Client(string inp)
         {
             LioNewWord.Add(inp);
-            
         }
-
-        public void HandlingModifyOnDatabase ()
-        {
-            using (var form = new ModifyOnDatabase(dbName, dbUID, dbPassword,textBox1.Text, richTextBox1.Text))
-            {
-                var result = form.ShowDialog();
-            }
-        }
-        #endregion
     }
 }

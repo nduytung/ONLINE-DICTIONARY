@@ -54,12 +54,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modify_Meaning.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modify_Meaning.Designer.cs">
-      <DependentUpon>Modify_Meaning.cs</DependentUpon>
-    </Compile>
     <Compile Include="NewWordSub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,9 +65,6 @@
     <Compile Include="ServerCommunicate.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modify_Meaning.resx">
-      <DependentUpon>Modify_Meaning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewWordSub.resx">
       <DependentUpon>NewWordSub.cs</DependentUpon>
